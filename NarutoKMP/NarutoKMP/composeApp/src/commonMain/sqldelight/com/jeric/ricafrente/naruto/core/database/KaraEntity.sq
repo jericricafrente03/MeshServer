@@ -1,0 +1,32 @@
+CREATE TABLE IF NOT EXISTS kara_table (
+    id TEXT PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    images TEXT, -- JSON array as String
+    jutsu TEXT, -- JSON array as String
+    natureType TEXT, -- JSON array as String
+    tools TEXT, -- JSON array as String
+
+    father TEXT,
+    mother TEXT,
+    brother TEXT,
+    daughter TEXT,
+    wife TEXT,
+
+    birthdate TEXT,
+    bloodType TEXT,
+    sex TEXT
+);
+
+selectAllKara:
+SELECT * FROM kara_table;
+
+selectKaraById:
+SELECT * FROM kara_table WHERE id = ?;
+
+insertKara:
+INSERT OR REPLACE INTO kara_table(
+    id, name, images, jutsu, natureType, tools,father,mother,brother,daughter,wife,birthdate,bloodType,sex
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?);
+
+deleteAllKara:
+DELETE FROM kara_table;

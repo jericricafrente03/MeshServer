@@ -1,0 +1,43 @@
+CREATE TABLE IF NOT EXISTS Character (
+    id TEXT PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    images TEXT, -- JSON array as String
+    jutsu TEXT, -- JSON array as String
+    natureType TEXT, -- JSON array as String
+    tools TEXT, -- JSON array as String
+
+    father TEXT,
+    mother TEXT,
+    brother TEXT,
+    daughter TEXT,
+    wife TEXT,
+
+    birthdate TEXT,
+    bloodType TEXT,
+    sex TEXT
+);
+
+insertCharacter:
+INSERT OR REPLACE INTO Character (
+    id, name, images, jutsu, natureType, tools,
+    father, mother, brother, daughter, wife,
+    birthdate, bloodType, sex
+) VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?,
+    ?, ?, ?
+);
+
+deleteCharacterById:
+DELETE FROM Character
+WHERE id = ?;
+
+selectAllCharacters:
+SELECT * FROM Character LIMIT :limit OFFSET :offset;
+
+selectCharacterById:
+SELECT * FROM Character
+WHERE id = ?;
+
+deleteAllHeroes:
+DELETE FROM Character;

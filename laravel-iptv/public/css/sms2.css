@@ -1,0 +1,61 @@
+.chat-box {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ensure the chat box takes up the full height of its container */
+}
+
+.chat-box-body {
+  position: relative;
+  height: calc(100% - 47px); /* Leave space for chat input */
+  overflow-y: auto; /* Enable vertical scrollbar if needed */
+}
+
+.chat-logs {
+  /* No specific positioning needed */
+  /* Add any other styles you need */
+}
+
+.chat-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto; /* Allow the chat input to expand */
+}
+
+#textarea-container {
+  position: relative;
+  min-height: 47px; /* Set minimum height for the container */
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+  border: 1px solid #ccc;
+  border-top: none;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#textarea-inner {
+  position: relative;
+}
+
+#chat-input {
+  width: calc(100% - 40px); /* Adjust for button width */
+  height: auto;
+  resize: none;
+  outline: none;
+  border: none;
+  padding: 10px 50px 10px 15px; /* Adjust padding as needed */
+  color: #888;
+  box-sizing: border-box;
+}
+
+.chat-submit {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px; /* Adjust button width */
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  /* Add any other styles you need */
+}

@@ -1,0 +1,2793 @@
+openapi: 3.0.3
+info:
+  title: MeshtvIPTV
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/aiello/toggleTvPower:
+    post:
+      summary: ''
+      operationId: postApiAielloToggleTvPower
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - ''
+      security: []
+  /api/aiello/volumeChange:
+    post:
+      summary: ''
+      operationId: postApiAielloVolumeChange
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - ''
+      security: []
+  /api/aiello/getTvChannels:
+    get:
+      summary: ''
+      operationId: getApiAielloGetTvChannels
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Server Error'
+                properties:
+                  message:
+                    type: string
+                    example: 'Server Error'
+      tags:
+        - ''
+      security: []
+  /api/aiello/openApplication:
+    post:
+      summary: ''
+      operationId: postApiAielloOpenApplication
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - ''
+      security: []
+  /api/aiello/changeTvChannel:
+    post:
+      summary: ''
+      operationId: postApiAielloChangeTvChannel
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - ''
+      security: []
+  /api/get_analytic_type:
+    get:
+      summary: ''
+      operationId: getApiGet_analytic_type
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 6
+                      category_key: Application
+                      type_id: 44
+                      item_id: 29
+                      room_id: 29
+                    -
+                      id: 79802
+                      category_key: TV
+                      type_id: 32
+                      item_id: 25
+                      room_id: 40
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 6
+                        category_key: Application
+                        type_id: 44
+                        item_id: 29
+                        room_id: 29
+                      -
+                        id: 79802
+                        category_key: TV
+                        type_id: 32
+                        item_id: 25
+                        room_id: 40
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 6
+                        category_key:
+                          type: string
+                          example: Application
+                        type_id:
+                          type: integer
+                          example: 44
+                        item_id:
+                          type: integer
+                          example: 29
+                        room_id:
+                          type: integer
+                          example: 29
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API AnalyticController'
+  /api/analytics:
+    post:
+      summary: ''
+      operationId: postApiAnalytics
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 83032945
+                      category_key: Application
+                      type_id: 37
+                      item_id: 22
+                      room_id: 50
+                    -
+                      id: 6702
+                      category_key: Application
+                      type_id: 35
+                      item_id: 24
+                      room_id: 20
+                  result: success
+                  message: 'Analytics created successfully'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 83032945
+                        category_key: Application
+                        type_id: 37
+                        item_id: 22
+                        room_id: 50
+                      -
+                        id: 6702
+                        category_key: Application
+                        type_id: 35
+                        item_id: 24
+                        room_id: 20
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 83032945
+                        category_key:
+                          type: string
+                          example: Application
+                        type_id:
+                          type: integer
+                          example: 37
+                        item_id:
+                          type: integer
+                          example: 22
+                        room_id:
+                          type: integer
+                          example: 50
+                  result:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: 'Analytics created successfully'
+      tags:
+        - 'API AnalyticController'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  description: 'Array of analytics.'
+                  example:
+                    - []
+                  items:
+                    type: object
+                    properties:
+                      counter:
+                        type: integer
+                        description: 'Total Count for target item for analytics.'
+                        example: 3
+                      type_id:
+                        type: integer
+                        description: 'The id of analytics type.'
+                        example: 2
+                      item_id:
+                        type: integer
+                        description: 'The id of the target.'
+                        example: 2
+                      room_id:
+                        type: integer
+                        description: 'The id of room.'
+                        example: 2
+                    required:
+                      - counter
+                      - type_id
+                      - item_id
+                      - room_id
+              required:
+                - data
+  /api/stb_register:
+    post:
+      summary: ''
+      operationId: postApiStb_register
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    device_id: 5
+                    room: '105'
+                    username: c44eac205e6b
+                    version: '5.0'
+                    class: stb_register
+                  room_number: '105'
+                  result: success
+                  message: 'STB has been registered'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      device_id:
+                        type: integer
+                        example: 5
+                      room:
+                        type: string
+                        example: '105'
+                      username:
+                        type: string
+                        example: c44eac205e6b
+                      version:
+                        type: string
+                        example: '5.0'
+                      class:
+                        type: string
+                        example: stb_register
+                  room_number:
+                    type: string
+                    example: '105'
+                  result:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: 'STB has been registered'
+      tags:
+        - 'API AuthController'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  description: ''
+                  example: []
+                  properties:
+                    api_key:
+                      type: string
+                      description: 'The created API.'
+                      example: e2b9a548f72c0f2b63b822e0ab734cd8
+                    mac_address:
+                      type: string
+                      description: 'Mac Address below your device.'
+                      example: c44eac205e9c
+                    room_number:
+                      type: string
+                      description: 'The set room number for the device.'
+                      example: '105'
+                    version:
+                      type: string
+                      description: 'The system version.'
+                      example: '4.1'
+                    area_id:
+                      type: string
+                      description: 'The Area Id of device.'
+                      example: '1'
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 244
+                    name: c44eac205e6b
+                    firstname: null
+                    lastname: null
+                    email: wkeebler@example.com
+                    email_verified_at: '2025-04-24T02:24:54.000000Z'
+                    role_id: 3
+                    image: null
+                    initials_random_color: null
+                    is_stb: 0
+                    created_at: '2025-04-24 10:24:54'
+                    updated_at: '2025-04-24 10:24:54'
+                  token: 24|fDeOD181eJOROGKvGxdDMSnEC8A6fwduMqVAeROcace50f17
+                  result: success
+                  message: 'Successfully login!'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 244
+                      name:
+                        type: string
+                        example: c44eac205e6b
+                      firstname:
+                        type: string
+                        example: null
+                      lastname:
+                        type: string
+                        example: null
+                      email:
+                        type: string
+                        example: wkeebler@example.com
+                      email_verified_at:
+                        type: string
+                        example: '2025-04-24T02:24:54.000000Z'
+                      role_id:
+                        type: integer
+                        example: 3
+                      image:
+                        type: string
+                        example: null
+                      initials_random_color:
+                        type: string
+                        example: null
+                      is_stb:
+                        type: integer
+                        example: 0
+                      created_at:
+                        type: string
+                        example: '2025-04-24 10:24:54'
+                      updated_at:
+                        type: string
+                        example: '2025-04-24 10:24:54'
+                  token:
+                    type: string
+                    example: 24|fDeOD181eJOROGKvGxdDMSnEC8A6fwduMqVAeROcace50f17
+                  result:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: 'Successfully login!'
+      tags:
+        - 'API AuthController'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  description: ''
+                  example: []
+                  properties:
+                    name:
+                      type: string
+                      description: 'The mac address of device.'
+                      example: c44eac205e6b
+                    password:
+                      type: string
+                      description: 'The api_key after you register .'
+                      example: 2b9e031e600bb7a40e3a57ba6e0df8d4
+  /api/check_token:
+    get:
+      summary: ''
+      operationId: getApiCheck_token
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  result: failed
+                  message: 'Invalid token.'
+                properties:
+                  result:
+                    type: string
+                    example: failed
+                  message:
+                    type: string
+                    example: 'Invalid token.'
+      tags:
+        - 'API AuthController'
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'API AuthController'
+  /api/stb_time:
+    get:
+      summary: ''
+      operationId: getApiStb_time
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                  result: failed
+                  reason: Unauthenticated.
+                properties:
+                  data:
+                    type: array
+                    example: []
+                  result:
+                    type: string
+                    example: failed
+                  reason:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'API AuthController'
+      security: []
+  /api/get_broadcast_messaging:
+    get:
+      summary: ''
+      operationId: getApiGet_broadcast_messaging
+      description: ''
+      parameters:
+        -
+          in: query
+          name: id
+          description: "The ticker' id."
+          example: 11
+          required: true
+          schema:
+            type: string
+            description: "The ticker' id."
+            example: 11
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 5
+                    img_uri: 'http://192.168.110.29:8080/storage/upload/broadcast_message/advertisements/bCE61HJr6cf1kAPPmQ4qxqSSYDLUN15pnVAMuceM.jpg'
+                    duration: '5'
+                    message: 'This is Broadcast Messaging.'
+                    broadcast_type:
+                      id: '6'
+                      name: Ticker
+                  result: success
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 5
+                      img_uri:
+                        type: string
+                        example: 'http://192.168.110.29:8080/storage/upload/broadcast_message/advertisements/bCE61HJr6cf1kAPPmQ4qxqSSYDLUN15pnVAMuceM.jpg'
+                      duration:
+                        type: string
+                        example: '5'
+                      message:
+                        type: string
+                        example: 'This is Broadcast Messaging.'
+                      broadcast_type:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                            example: '6'
+                          name:
+                            type: string
+                            example: Ticker
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API BroadcastMessagingController'
+  /api/enter_netflix:
+    get:
+      summary: ''
+      operationId: getApiEnter_netflix
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  result: 'Current focus is not com.netflix.ninja, it is:'
+                properties:
+                  result:
+                    type: string
+                    example: 'Current focus is not com.netflix.ninja, it is:'
+      tags:
+        - 'API DeviceController'
+  /api/clear_cache:
+    get:
+      summary: ''
+      operationId: getApiClear_cache
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  result: 127.0.0.1
+                properties:
+                  result:
+                    type: string
+                    example: 127.0.0.1
+      tags:
+        - 'API DeviceController'
+  /api/get_language:
+    get:
+      summary: ''
+      operationId: getApiGet_language
+      description: ''
+      parameters:
+        -
+          in: query
+          name: room
+          description: 'The room number to fetch messages for.'
+          example: 102
+          required: true
+          schema:
+            type: string
+            description: 'The room number to fetch messages for.'
+            example: 102
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 75
+                    name: Arabic
+                  result: success
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 75
+                      name:
+                        type: string
+                        example: Arabic
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API DeviceController'
+  /api/get_wifi_qr_code:
+    get:
+      summary: ''
+      operationId: getApiGet_wifi_qr_code
+      description: ''
+      parameters:
+        -
+          in: query
+          name: mac_address
+          description: 'The mac address of specific device.'
+          example: 900eb3510b0b
+          required: true
+          schema:
+            type: string
+            description: 'The mac address of specific device.'
+            example: 900eb3510b0b
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    path: 'http://192.168.110.29:8080/storage/upload/qr_code/192.168.110.204_900eb3510b0b.png'
+                  message: 'QR Code generated successfully'
+                  result: success
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      path:
+                        type: string
+                        example: 'http://192.168.110.29:8080/storage/upload/qr_code/192.168.110.204_900eb3510b0b.png'
+                  message:
+                    type: string
+                    example: 'QR Code generated successfully'
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API DeviceController'
+  /api/get_facility_categories:
+    get:
+      summary: ''
+      operationId: getApiGet_facility_categories
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 9
+                      name: 'Jaskolski, Marvin and Purdy'
+                      description: 'Mollitia dicta est est voluptates. Ut blanditiis officia numquam eligendi. Pariatur sunt explicabo pariatur magnam quis. Debitis omnis eum consectetur vel.'
+                      img_preview_uri: 'http://192.168.110.29:8080/storage/upload/facility_categories/wivchxyuhzorskaanlxbumccynjvmq.png'
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/facility_categories/zhffrtfhdpngwwmntnvuhlnojhsbip.png'
+                      order_no: 993005322
+                    -
+                      id: 2524405
+                      name: 'Kozey, Dickens and Fahey'
+                      description: 'Quibusdam dolores atque illum labore ut aut ut aut. Quasi explicabo est culpa non laboriosam. Ea sit id ipsa qui cum velit ut porro. Officia blanditiis quas et.'
+                      img_preview_uri: 'http://192.168.110.29:8080/storage/upload/facility_categories/lmghrzpxadlkwntmgxfzybmxjcwjiv.png'
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/facility_categories/kraouwefsrvxudjidrjamzfrztzqvy.png'
+                      order_no: 769
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 9
+                        name: 'Jaskolski, Marvin and Purdy'
+                        description: 'Mollitia dicta est est voluptates. Ut blanditiis officia numquam eligendi. Pariatur sunt explicabo pariatur magnam quis. Debitis omnis eum consectetur vel.'
+                        img_preview_uri: 'http://192.168.110.29:8080/storage/upload/facility_categories/wivchxyuhzorskaanlxbumccynjvmq.png'
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/facility_categories/zhffrtfhdpngwwmntnvuhlnojhsbip.png'
+                        order_no: 993005322
+                      -
+                        id: 2524405
+                        name: 'Kozey, Dickens and Fahey'
+                        description: 'Quibusdam dolores atque illum labore ut aut ut aut. Quasi explicabo est culpa non laboriosam. Ea sit id ipsa qui cum velit ut porro. Officia blanditiis quas et.'
+                        img_preview_uri: 'http://192.168.110.29:8080/storage/upload/facility_categories/lmghrzpxadlkwntmgxfzybmxjcwjiv.png'
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/facility_categories/kraouwefsrvxudjidrjamzfrztzqvy.png'
+                        order_no: 769
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 9
+                        name:
+                          type: string
+                          example: 'Jaskolski, Marvin and Purdy'
+                        description:
+                          type: string
+                          example: 'Mollitia dicta est est voluptates. Ut blanditiis officia numquam eligendi. Pariatur sunt explicabo pariatur magnam quis. Debitis omnis eum consectetur vel.'
+                        img_preview_uri:
+                          type: string
+                          example: 'http://192.168.110.29:8080/storage/upload/facility_categories/wivchxyuhzorskaanlxbumccynjvmq.png'
+                        img_uri:
+                          type: string
+                          example: 'http://192.168.110.29:8080/storage/upload/facility_categories/zhffrtfhdpngwwmntnvuhlnojhsbip.png'
+                        order_no:
+                          type: integer
+                          example: 993005322
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API FacilityCategoryController'
+  /api/get_facilities:
+    get:
+      summary: ''
+      operationId: getApiGet_facilities
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 762
+                      name: Bernhard-Senger
+                      description: 'Fugit qui mollitia amet asperiores provident voluptatem. Totam quo iusto cumque consequuntur. Non dolores minus nostrum deserunt vel. Perspiciatis nihil nobis esse neque dolor quod. Qui sed aut ipsa.'
+                      unit_price: 269.47
+                      category_id: 1187
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/wnilcpgfpfswwkxzodvbmomnybrrdh.png'
+                    -
+                      id: 70380640
+                      name: 'McClure, Bernier and Kozey'
+                      description: 'Asperiores molestias quae aut ut et et. Iusto laboriosam vero voluptatem inventore nihil dignissimos.'
+                      unit_price: '711.28'
+                      category_id: 2
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/selycyoortnlfbzsaotawbhjygryuc.png'
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 762
+                        name: Bernhard-Senger
+                        description: 'Fugit qui mollitia amet asperiores provident voluptatem. Totam quo iusto cumque consequuntur. Non dolores minus nostrum deserunt vel. Perspiciatis nihil nobis esse neque dolor quod. Qui sed aut ipsa.'
+                        unit_price: 269.47
+                        category_id: 1187
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/wnilcpgfpfswwkxzodvbmomnybrrdh.png'
+                      -
+                        id: 70380640
+                        name: 'McClure, Bernier and Kozey'
+                        description: 'Asperiores molestias quae aut ut et et. Iusto laboriosam vero voluptatem inventore nihil dignissimos.'
+                        unit_price: '711.28'
+                        category_id: 2
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/selycyoortnlfbzsaotawbhjygryuc.png'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 762
+                        name:
+                          type: string
+                          example: Bernhard-Senger
+                        description:
+                          type: string
+                          example: 'Fugit qui mollitia amet asperiores provident voluptatem. Totam quo iusto cumque consequuntur. Non dolores minus nostrum deserunt vel. Perspiciatis nihil nobis esse neque dolor quod. Qui sed aut ipsa.'
+                        unit_price:
+                          type: number
+                          example: 269.47
+                        category_id:
+                          type: integer
+                          example: 1187
+                        img_uri:
+                          type: string
+                          example: 'http://192.168.110.29:8080/storage/upload/facilities/wnilcpgfpfswwkxzodvbmomnybrrdh.png'
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API FacilityController'
+  /api/get_fnb_categories:
+    get:
+      summary: ''
+      operationId: getApiGet_fnb_categories
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 931453144
+                      name: Breakfast
+                      description: 'Assumenda omnis ut molestias debitis quas. Quas quis dolor voluptate. Dolorem quia dolorem totam iure blanditiis. Accusantium suscipit aliquam quisquam expedita nam.'
+                      order_no: 350
+                    -
+                      id: 264
+                      name: Dinner
+                      description: 'Omnis eligendi aut quibusdam aut possimus. Aut dolor mollitia rerum possimus dolorem error. Rerum at amet numquam. Excepturi excepturi quis doloribus facilis assumenda aut.'
+                      order_no: 223321
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 931453144
+                        name: Breakfast
+                        description: 'Assumenda omnis ut molestias debitis quas. Quas quis dolor voluptate. Dolorem quia dolorem totam iure blanditiis. Accusantium suscipit aliquam quisquam expedita nam.'
+                        order_no: 350
+                      -
+                        id: 264
+                        name: Dinner
+                        description: 'Omnis eligendi aut quibusdam aut possimus. Aut dolor mollitia rerum possimus dolorem error. Rerum at amet numquam. Excepturi excepturi quis doloribus facilis assumenda aut.'
+                        order_no: 223321
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 931453144
+                        name:
+                          type: string
+                          example: Breakfast
+                        description:
+                          type: string
+                          example: 'Assumenda omnis ut molestias debitis quas. Quas quis dolor voluptate. Dolorem quia dolorem totam iure blanditiis. Accusantium suscipit aliquam quisquam expedita nam.'
+                        order_no:
+                          type: integer
+                          example: 350
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API FnbCategoryController'
+  /api/get_fnbs:
+    get:
+      summary: ''
+      operationId: getApiGet_fnbs
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 62631
+                      name: Sushi
+                      description: 'Architecto quae autem saepe. Optio nesciunt sed ea ut modi. Facere accusamus odit quisquam. Aut laudantium consequatur similique.'
+                      unit_price: 949.93
+                      category_id: 2524
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/lgaczjbxskqzykeotjsfaouqvpxxfx.png'
+                    -
+                      id: 2357
+                      name: Curry
+                      description: 'Sunt voluptates facere possimus. Voluptas veritatis aliquid aperiam et eveniet. Est repellendus id animi labore.'
+                      unit_price: 237.37
+                      category_id: 542954260
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/bgpxjxgezfbqvshwrcffjpnwsetvif.png'
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 62631
+                        name: Sushi
+                        description: 'Architecto quae autem saepe. Optio nesciunt sed ea ut modi. Facere accusamus odit quisquam. Aut laudantium consequatur similique.'
+                        unit_price: 949.93
+                        category_id: 2524
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/lgaczjbxskqzykeotjsfaouqvpxxfx.png'
+                      -
+                        id: 2357
+                        name: Curry
+                        description: 'Sunt voluptates facere possimus. Voluptas veritatis aliquid aperiam et eveniet. Est repellendus id animi labore.'
+                        unit_price: 237.37
+                        category_id: 542954260
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/bgpxjxgezfbqvshwrcffjpnwsetvif.png'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 62631
+                        name:
+                          type: string
+                          example: Sushi
+                        description:
+                          type: string
+                          example: 'Architecto quae autem saepe. Optio nesciunt sed ea ut modi. Facere accusamus odit quisquam. Aut laudantium consequatur similique.'
+                        unit_price:
+                          type: number
+                          example: 949.93
+                        category_id:
+                          type: integer
+                          example: 2524
+                        img_uri:
+                          type: string
+                          example: 'http://192.168.110.29:8080/storage/upload/facilities/lgaczjbxskqzykeotjsfaouqvpxxfx.png'
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API FnbController'
+  /api/get_recommended_fnbs:
+    get:
+      summary: ''
+      operationId: getApiGet_recommended_fnbs
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 504813683
+                      name: Dumplings
+                      description: 'Rem ipsam ipsam est nam. Aut quas ipsum deserunt maiores est ex. Iure vel id labore numquam deserunt est. Maiores pariatur porro perspiciatis beatae voluptatem sint.'
+                      unit_price: 316.59
+                      category_id: 0
+                      popularity_score: 58
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/aluklbyddqvoquemmzwnsumuppoplb.png'
+                    -
+                      id: 1122977
+                      name: Steak
+                      description: 'Aut est tempore fugiat alias similique iste. Necessitatibus beatae cumque nostrum sed rem. Omnis omnis quas adipisci vel. Eos dolorem in et debitis cum cum voluptatem sit.'
+                      unit_price: 102.99
+                      category_id: 0
+                      popularity_score: 31448017
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/ucnwryqzwgywitumfadscjbpumubcc.png'
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 504813683
+                        name: Dumplings
+                        description: 'Rem ipsam ipsam est nam. Aut quas ipsum deserunt maiores est ex. Iure vel id labore numquam deserunt est. Maiores pariatur porro perspiciatis beatae voluptatem sint.'
+                        unit_price: 316.59
+                        category_id: 0
+                        popularity_score: 58
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/aluklbyddqvoquemmzwnsumuppoplb.png'
+                      -
+                        id: 1122977
+                        name: Steak
+                        description: 'Aut est tempore fugiat alias similique iste. Necessitatibus beatae cumque nostrum sed rem. Omnis omnis quas adipisci vel. Eos dolorem in et debitis cum cum voluptatem sit.'
+                        unit_price: 102.99
+                        category_id: 0
+                        popularity_score: 31448017
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/facilities/ucnwryqzwgywitumfadscjbpumubcc.png'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 504813683
+                        name:
+                          type: string
+                          example: Dumplings
+                        description:
+                          type: string
+                          example: 'Rem ipsam ipsam est nam. Aut quas ipsum deserunt maiores est ex. Iure vel id labore numquam deserunt est. Maiores pariatur porro perspiciatis beatae voluptatem sint.'
+                        unit_price:
+                          type: number
+                          example: 316.59
+                        category_id:
+                          type: integer
+                          example: 0
+                        popularity_score:
+                          type: integer
+                          example: 58
+                        img_uri:
+                          type: string
+                          example: 'http://192.168.110.29:8080/storage/upload/facilities/aluklbyddqvoquemmzwnsumuppoplb.png'
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API FnbController'
+  /api/mesh_transaction:
+    post:
+      summary: ''
+      operationId: postApiMesh_transaction
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 800
+                      transaction_datetime: '2000-01-07 22:01:04'
+                      room_number: '101'
+                      room_id: 1
+                      category: service_request
+                      item_name: Curry
+                      item_id: 171356
+                      quantity: 7
+                      unit_price: '9.00'
+                      refno: '59330872'
+                      status: Cancelled
+                      status_id: 14
+                      user: STB
+                      user_id: 1
+                      reserve_no: null
+                      notes: null
+                      is_paid: 0
+                      room_assignment_id: 5
+                      guest_name: "Earline O'Reilly"
+                      created_at: '2025-01-28 00:17:11'
+                      updated_at: '2024-07-25 11:34:00'
+                    -
+                      id: 801
+                      transaction_datetime: '1994-11-28 02:19:32'
+                      room_number: '101'
+                      room_id: 1
+                      category: fnb
+                      item_name: Curry
+                      item_id: 443115708
+                      quantity: 3
+                      unit_price: '8.00'
+                      refno: '24695016'
+                      status: Delivered
+                      status_id: 12
+                      user: STB
+                      user_id: 1
+                      reserve_no: null
+                      notes: null
+                      is_paid: 0
+                      room_assignment_id: 5
+                      guest_name: 'Mr. Abner King I'
+                      created_at: '2025-03-15 18:24:56'
+                      updated_at: '2025-03-08 06:54:08'
+                  result: success
+                  message: 'Guest Billing created successfully'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 800
+                        transaction_datetime: '2000-01-07 22:01:04'
+                        room_number: '101'
+                        room_id: 1
+                        category: service_request
+                        item_name: Curry
+                        item_id: 171356
+                        quantity: 7
+                        unit_price: '9.00'
+                        refno: '59330872'
+                        status: Cancelled
+                        status_id: 14
+                        user: STB
+                        user_id: 1
+                        reserve_no: null
+                        notes: null
+                        is_paid: 0
+                        room_assignment_id: 5
+                        guest_name: "Earline O'Reilly"
+                        created_at: '2025-01-28 00:17:11'
+                        updated_at: '2024-07-25 11:34:00'
+                      -
+                        id: 801
+                        transaction_datetime: '1994-11-28 02:19:32'
+                        room_number: '101'
+                        room_id: 1
+                        category: fnb
+                        item_name: Curry
+                        item_id: 443115708
+                        quantity: 3
+                        unit_price: '8.00'
+                        refno: '24695016'
+                        status: Delivered
+                        status_id: 12
+                        user: STB
+                        user_id: 1
+                        reserve_no: null
+                        notes: null
+                        is_paid: 0
+                        room_assignment_id: 5
+                        guest_name: 'Mr. Abner King I'
+                        created_at: '2025-03-15 18:24:56'
+                        updated_at: '2025-03-08 06:54:08'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 800
+                        transaction_datetime:
+                          type: string
+                          example: '2000-01-07 22:01:04'
+                        room_number:
+                          type: string
+                          example: '101'
+                        room_id:
+                          type: integer
+                          example: 1
+                        category:
+                          type: string
+                          example: service_request
+                        item_name:
+                          type: string
+                          example: Curry
+                        item_id:
+                          type: integer
+                          example: 171356
+                        quantity:
+                          type: integer
+                          example: 7
+                        unit_price:
+                          type: string
+                          example: '9.00'
+                        refno:
+                          type: string
+                          example: '59330872'
+                        status:
+                          type: string
+                          example: Cancelled
+                        status_id:
+                          type: integer
+                          example: 14
+                        user:
+                          type: string
+                          example: STB
+                        user_id:
+                          type: integer
+                          example: 1
+                        reserve_no:
+                          type: string
+                          example: null
+                        notes:
+                          type: string
+                          example: null
+                        is_paid:
+                          type: integer
+                          example: 0
+                        room_assignment_id:
+                          type: integer
+                          example: 5
+                        guest_name:
+                          type: string
+                          example: "Earline O'Reilly"
+                        created_at:
+                          type: string
+                          example: '2025-01-28 00:17:11'
+                        updated_at:
+                          type: string
+                          example: '2024-07-25 11:34:00'
+                  result:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: 'Guest Billing created successfully'
+      tags:
+        - 'API GuestBillingController'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: array
+                  description: 'An array of transaction data.'
+                  example:
+                    -
+                      room_id: 101
+                      type: fnb
+                      item_id: 1
+                      quantity: 2
+                      unit_price: 29.99
+                      room_assignment_id: 1
+                    -
+                      room_id: 101
+                      type: item_request
+                      item_id: 2
+                      quantity: 1
+                      unit_price: 550
+                      room_assignment_id: 1
+                  items:
+                    type: string
+              required:
+                - data
+  /api/get_hotel_infos:
+    get:
+      summary: ''
+      operationId: getApiGet_hotel_infos
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 5262
+                      name: "O'Keefe, Bogan and Kuvalis"
+                      description: 'Et maxime dolore in quas fugit sint eos. Praesentium perspiciatis est molestiae eum provident. Possimus ut labore omnis ullam.'
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/hotel_infos/ujgdzysukfmctdpvkstuxhjkhhlljc.png'
+                      order_no: 167795370
+                    -
+                      id: 623663
+                      name: 'Macejkovic, Pollich and Barton'
+                      description: 'Nobis et modi atque tempora aspernatur neque. Qui ipsam quisquam dolorum. Qui impedit sed esse impedit magnam. Soluta suscipit ut sequi adipisci dolorem sint impedit.'
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/hotel_infos/mvwevatofvermnboabkfngzkqxfmie.png'
+                      order_no: 386
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 5262
+                        name: "O'Keefe, Bogan and Kuvalis"
+                        description: 'Et maxime dolore in quas fugit sint eos. Praesentium perspiciatis est molestiae eum provident. Possimus ut labore omnis ullam.'
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/hotel_infos/ujgdzysukfmctdpvkstuxhjkhhlljc.png'
+                        order_no: 167795370
+                      -
+                        id: 623663
+                        name: 'Macejkovic, Pollich and Barton'
+                        description: 'Nobis et modi atque tempora aspernatur neque. Qui ipsam quisquam dolorum. Qui impedit sed esse impedit magnam. Soluta suscipit ut sequi adipisci dolorem sint impedit.'
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/hotel_infos/mvwevatofvermnboabkfngzkqxfmie.png'
+                        order_no: 386
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 5262
+                        name:
+                          type: string
+                          example: "O'Keefe, Bogan and Kuvalis"
+                        description:
+                          type: string
+                          example: 'Et maxime dolore in quas fugit sint eos. Praesentium perspiciatis est molestiae eum provident. Possimus ut labore omnis ullam.'
+                        img_uri:
+                          type: string
+                          example: 'http://192.168.110.29:8080/storage/upload/hotel_infos/ujgdzysukfmctdpvkstuxhjkhhlljc.png'
+                        order_no:
+                          type: integer
+                          example: 167795370
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API HotelInfoController'
+  /api/get_item_requests:
+    get:
+      summary: ''
+      operationId: getApiGet_item_requests
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 9841
+                      name: 'Herzog Group'
+                      description: 'Aspernatur dolorem modi blanditiis ut ipsam et. Quia esse tenetur nulla. Qui asperiores inventore beatae sit aut accusantium.'
+                      unit_price: '275.84'
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/item_request/bjcekziklxnqybttvvgfedmtjrqyrm.png'
+                      order_no: null
+                      deleted_at: null
+                    -
+                      id: 91476886
+                      name: 'Huels LLC'
+                      description: 'Sunt officiis consequatur nihil enim neque consequuntur magnam quos. Non dolorem quisquam non. Praesentium quis excepturi aut deleniti non pariatur. Tempora vel sit omnis ullam sed pariatur et.'
+                      unit_price: '229.04'
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/item_request/yhmzsavfjnokqiresvioelvgbeeofs.png'
+                      order_no: null
+                      deleted_at: null
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 9841
+                        name: 'Herzog Group'
+                        description: 'Aspernatur dolorem modi blanditiis ut ipsam et. Quia esse tenetur nulla. Qui asperiores inventore beatae sit aut accusantium.'
+                        unit_price: '275.84'
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/item_request/bjcekziklxnqybttvvgfedmtjrqyrm.png'
+                        order_no: null
+                        deleted_at: null
+                      -
+                        id: 91476886
+                        name: 'Huels LLC'
+                        description: 'Sunt officiis consequatur nihil enim neque consequuntur magnam quos. Non dolorem quisquam non. Praesentium quis excepturi aut deleniti non pariatur. Tempora vel sit omnis ullam sed pariatur et.'
+                        unit_price: '229.04'
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/item_request/yhmzsavfjnokqiresvioelvgbeeofs.png'
+                        order_no: null
+                        deleted_at: null
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 9841
+                        name:
+                          type: string
+                          example: 'Herzog Group'
+                        description:
+                          type: string
+                          example: 'Aspernatur dolorem modi blanditiis ut ipsam et. Quia esse tenetur nulla. Qui asperiores inventore beatae sit aut accusantium.'
+                        unit_price:
+                          type: string
+                          example: '275.84'
+                        img_uri:
+                          type: string
+                          example: 'http://192.168.110.29:8080/storage/upload/item_request/bjcekziklxnqybttvvgfedmtjrqyrm.png'
+                        order_no:
+                          type: string
+                          example: null
+                        deleted_at:
+                          type: string
+                          example: null
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API ItemRequestController'
+  /api/get_message:
+    get:
+      summary: ''
+      operationId: getApiGet_message
+      description: ''
+      parameters:
+        -
+          in: query
+          name: room
+          description: 'The room number to fetch messages for.'
+          example: 102
+          required: true
+          schema:
+            type: string
+            description: 'The room number to fetch messages for.'
+            example: 102
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 74589
+                      regular_message_id: 984
+                      room_id: 418
+                      status_id: 7
+                      created_at: '2025-04-29 16:31:18'
+                      updated_at: '2025-04-29 16:31:18'
+                      status:
+                        id: 7
+                        title: Seen
+                      from: Me
+                      subject: Subject
+                      body: '<p>Test</p>'
+                    -
+                      id: 44267
+                      regular_message_id: 34
+                      room_id: 565561
+                      status_id: 9888
+                      created_at: '2025-04-24 22:39:43'
+                      updated_at: '2025-04-24 22:39:43'
+                      status:
+                        id: 9888
+                        title: Seen
+                      from: Me
+                      subject: Subject
+                      body: '<p>Test</p>'
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 74589
+                        regular_message_id: 984
+                        room_id: 418
+                        status_id: 7
+                        created_at: '2025-04-29 16:31:18'
+                        updated_at: '2025-04-29 16:31:18'
+                        status:
+                          id: 7
+                          title: Seen
+                        from: Me
+                        subject: Subject
+                        body: '<p>Test</p>'
+                      -
+                        id: 44267
+                        regular_message_id: 34
+                        room_id: 565561
+                        status_id: 9888
+                        created_at: '2025-04-24 22:39:43'
+                        updated_at: '2025-04-24 22:39:43'
+                        status:
+                          id: 9888
+                          title: Seen
+                        from: Me
+                        subject: Subject
+                        body: '<p>Test</p>'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 74589
+                        regular_message_id:
+                          type: integer
+                          example: 984
+                        room_id:
+                          type: integer
+                          example: 418
+                        status_id:
+                          type: integer
+                          example: 7
+                        created_at:
+                          type: string
+                          example: '2025-04-29 16:31:18'
+                        updated_at:
+                          type: string
+                          example: '2025-04-29 16:31:18'
+                        status:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 7
+                            title:
+                              type: string
+                              example: Seen
+                        from:
+                          type: string
+                          example: Me
+                        subject:
+                          type: string
+                          example: Subject
+                        body:
+                          type: string
+                          example: '<p>Test</p>'
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API RegularMessageController'
+  /api/read_message:
+    put:
+      summary: ''
+      operationId: putApiRead_message
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  result: success
+                  message: 'Record has been updated.'
+                properties:
+                  result:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: 'Record has been updated.'
+      tags:
+        - 'API RegularMessageController'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  description: ''
+                  example: []
+                  properties:
+                    room:
+                      type: string
+                      description: 'The name of room.'
+                      example: autem
+                    message_recipient_id:
+                      type: integer
+                      description: 'Id of message.'
+                      example: 14
+  /api/delete_message:
+    put:
+      summary: ''
+      operationId: putApiDelete_message
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  result: success
+                  message: 'Record has been deleted.'
+                properties:
+                  result:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: 'Record has been deleted.'
+      tags:
+        - 'API RegularMessageController'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: object
+                  description: ''
+                  example: []
+                  properties:
+                    room:
+                      type: string
+                      description: 'The name of room.'
+                      example: temporibus
+                    message_recipient_id:
+                      type: integer
+                      description: 'Id of message.'
+                      example: 5
+  /api/get_customer:
+    get:
+      summary: ''
+      operationId: getApiGet_customer
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    customer_id: 448312549
+                    room_id: 4806625
+                    check_in: '2025-04-23 07:14:56'
+                    check_out: '2025-04-25 08:41:11'
+                    s_check_out: '2025-04-30 16:08:29'
+                    reserve_no: RES53594
+                    cs: 1
+                    gs: 1
+                    is_checkout: 0
+                    guest:
+                      id: 777475
+                      title: Ms
+                      firstname: Axel
+                      lastname: Balistreri
+                      birthdate: '2012-11-11'
+                      street1: null
+                      street2: 'Apt. 660'
+                      city: Kaciefurt
+                      state_region: Nebraska
+                      country_id: '8'
+                      zip_code: '10218'
+                      mobile_no: +1-360-878-8217
+                      landline_no: '(724) 959-4869'
+                      email: null
+                  result: success
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      customer_id:
+                        type: integer
+                        example: 448312549
+                      room_id:
+                        type: integer
+                        example: 4806625
+                      check_in:
+                        type: string
+                        example: '2025-04-23 07:14:56'
+                      check_out:
+                        type: string
+                        example: '2025-04-25 08:41:11'
+                      s_check_out:
+                        type: string
+                        example: '2025-04-30 16:08:29'
+                      reserve_no:
+                        type: string
+                        example: RES53594
+                      cs:
+                        type: integer
+                        example: 1
+                      gs:
+                        type: integer
+                        example: 1
+                      is_checkout:
+                        type: integer
+                        example: 0
+                      guest:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 777475
+                          title:
+                            type: string
+                            example: Ms
+                          firstname:
+                            type: string
+                            example: Axel
+                          lastname:
+                            type: string
+                            example: Balistreri
+                          birthdate:
+                            type: string
+                            example: '2012-11-11'
+                          street1:
+                            type: string
+                            example: null
+                          street2:
+                            type: string
+                            example: 'Apt. 660'
+                          city:
+                            type: string
+                            example: Kaciefurt
+                          state_region:
+                            type: string
+                            example: Nebraska
+                          country_id:
+                            type: string
+                            example: '8'
+                          zip_code:
+                            type: string
+                            example: '10218'
+                          mobile_no:
+                            type: string
+                            example: +1-360-878-8217
+                          landline_no:
+                            type: string
+                            example: '(724) 959-4869'
+                          email:
+                            type: string
+                            example: null
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API RoomAssignment Controller'
+  /api/get_room_categories:
+    get:
+      summary: ''
+      operationId: getApiGet_room_categories
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 1600171
+                      name: 'Bogan PLC'
+                      description: 'Aut officia laborum in sit doloremque aliquid. Sint magnam eos voluptate mollitia adipisci. Ut dolore exercitationem ea quia odit qui. Nihil quaerat quia id est veritatis.'
+                      order_no: 293
+                    -
+                      id: 17680981
+                      name: 'Hermiston Inc'
+                      description: 'Quis qui ea est autem. Amet incidunt qui sapiente quisquam aut nihil hic aut. Id numquam occaecati laudantium molestias. Quae ex est ipsa accusantium aut qui quia voluptatem.'
+                      order_no: 198
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 1600171
+                        name: 'Bogan PLC'
+                        description: 'Aut officia laborum in sit doloremque aliquid. Sint magnam eos voluptate mollitia adipisci. Ut dolore exercitationem ea quia odit qui. Nihil quaerat quia id est veritatis.'
+                        order_no: 293
+                      -
+                        id: 17680981
+                        name: 'Hermiston Inc'
+                        description: 'Quis qui ea est autem. Amet incidunt qui sapiente quisquam aut nihil hic aut. Id numquam occaecati laudantium molestias. Quae ex est ipsa accusantium aut qui quia voluptatem.'
+                        order_no: 198
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1600171
+                        name:
+                          type: string
+                          example: 'Bogan PLC'
+                        description:
+                          type: string
+                          example: 'Aut officia laborum in sit doloremque aliquid. Sint magnam eos voluptate mollitia adipisci. Ut dolore exercitationem ea quia odit qui. Nihil quaerat quia id est veritatis.'
+                        order_no:
+                          type: integer
+                          example: 293
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API RoomCategoryController'
+  /api/get_rooms:
+    get:
+      summary: ''
+      operationId: getApiGet_rooms
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 4
+                      name: 971
+                      category_id: 54611315
+                      status:
+                        id: 93972029
+                        name: Available
+                    -
+                      id: 3921
+                      name: 57917133
+                      category_id: 271372
+                      status:
+                        id: 6
+                        name: Available
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 4
+                        name: 971
+                        category_id: 54611315
+                        status:
+                          id: 93972029
+                          name: Available
+                      -
+                        id: 3921
+                        name: 57917133
+                        category_id: 271372
+                        status:
+                          id: 6
+                          name: Available
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 4
+                        name:
+                          type: integer
+                          example: 971
+                        category_id:
+                          type: integer
+                          example: 54611315
+                        status:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 93972029
+                            name:
+                              type: string
+                              example: Available
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API RoomController'
+  /api/get_service_requests:
+    get:
+      summary: ''
+      operationId: getApiGet_service_requests
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 806
+                      name: 'Raynor Group'
+                      description: 'Perspiciatis aut nostrum consequatur debitis et modi. Neque tempora modi est ea. Nisi nobis doloremque officiis distinctio ipsum quis.'
+                      unit_price: '670.12'
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/service_request/bmwpzmmvvyoqbhpvdplvjlrayzepek.png'
+                      order_no: null
+                      deleted_at: null
+                    -
+                      id: 6959
+                      name: 'Smitham, Zieme and Pagac'
+                      description: 'Nam molestias sit eos asperiores. Aliquid placeat necessitatibus enim exercitationem porro nesciunt. Perferendis quas consectetur veritatis sit. Aut saepe et voluptatibus facilis.'
+                      unit_price: '932.95'
+                      img_uri: 'http://192.168.110.29:8080/storage/upload/service_request/jxeqgjnijvfzqtlobcwuncjupvfygh.png'
+                      order_no: null
+                      deleted_at: null
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 806
+                        name: 'Raynor Group'
+                        description: 'Perspiciatis aut nostrum consequatur debitis et modi. Neque tempora modi est ea. Nisi nobis doloremque officiis distinctio ipsum quis.'
+                        unit_price: '670.12'
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/service_request/bmwpzmmvvyoqbhpvdplvjlrayzepek.png'
+                        order_no: null
+                        deleted_at: null
+                      -
+                        id: 6959
+                        name: 'Smitham, Zieme and Pagac'
+                        description: 'Nam molestias sit eos asperiores. Aliquid placeat necessitatibus enim exercitationem porro nesciunt. Perferendis quas consectetur veritatis sit. Aut saepe et voluptatibus facilis.'
+                        unit_price: '932.95'
+                        img_uri: 'http://192.168.110.29:8080/storage/upload/service_request/jxeqgjnijvfzqtlobcwuncjupvfygh.png'
+                        order_no: null
+                        deleted_at: null
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 806
+                        name:
+                          type: string
+                          example: 'Raynor Group'
+                        description:
+                          type: string
+                          example: 'Perspiciatis aut nostrum consequatur debitis et modi. Neque tempora modi est ea. Nisi nobis doloremque officiis distinctio ipsum quis.'
+                        unit_price:
+                          type: string
+                          example: '670.12'
+                        img_uri:
+                          type: string
+                          example: 'http://192.168.110.29:8080/storage/upload/service_request/bmwpzmmvvyoqbhpvdplvjlrayzepek.png'
+                        order_no:
+                          type: string
+                          example: null
+                        deleted_at:
+                          type: string
+                          example: null
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API ServiceRequestController'
+  /api/get_system_config:
+    get:
+      summary: ''
+      operationId: getApiGet_system_config
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 601947
+                    name: 'FOX MOVIES HD'
+                    description: 'Nam ullam sit delectus. Aut rerum et maxime qui. Harum fugiat est laborum cupiditate fuga. Magnam explicabo similique maxime et asperiores magni.'
+                    street: 'Repellat voluptas enim eum nostrum odio. Accusamus laudantium omnis aliquid assumenda. Sunt dolor rerum aut ea velit ut ea. Maiores quidem voluptate nostrum ea et. Sint rerum corporis et saepe tempore impedit molestiae fugit. Repellat dignissimos in est deleniti et repellendus minus molestias.'
+                    city: 'ANIMAL PLANET'
+                    country_code: PF
+                    time_zone: Europe/Sofia
+                    email: tkuvalis@example.com
+                    currency: SCR
+                    website: 'http://www.schimmel.com/beatae-alias-nulla-voluptatem'
+                    logo: 'http://192.168.110.29:8080/upload/systemConfig/uyrxdfgqcrcjaydtsbosumkyktckbd.png'
+                    lat: '-46.788974'
+                    lon: '63.518139'
+                    welcome_message: 'FOX MOVIES HD'
+                    max_idle: 9
+                  result: success
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 601947
+                      name:
+                        type: string
+                        example: 'FOX MOVIES HD'
+                      description:
+                        type: string
+                        example: 'Nam ullam sit delectus. Aut rerum et maxime qui. Harum fugiat est laborum cupiditate fuga. Magnam explicabo similique maxime et asperiores magni.'
+                      street:
+                        type: string
+                        example: 'Repellat voluptas enim eum nostrum odio. Accusamus laudantium omnis aliquid assumenda. Sunt dolor rerum aut ea velit ut ea. Maiores quidem voluptate nostrum ea et. Sint rerum corporis et saepe tempore impedit molestiae fugit. Repellat dignissimos in est deleniti et repellendus minus molestias.'
+                      city:
+                        type: string
+                        example: 'ANIMAL PLANET'
+                      country_code:
+                        type: string
+                        example: PF
+                      time_zone:
+                        type: string
+                        example: Europe/Sofia
+                      email:
+                        type: string
+                        example: tkuvalis@example.com
+                      currency:
+                        type: string
+                        example: SCR
+                      website:
+                        type: string
+                        example: 'http://www.schimmel.com/beatae-alias-nulla-voluptatem'
+                      logo:
+                        type: string
+                        example: 'http://192.168.110.29:8080/upload/systemConfig/uyrxdfgqcrcjaydtsbosumkyktckbd.png'
+                      lat:
+                        type: string
+                        example: '-46.788974'
+                      lon:
+                        type: string
+                        example: '63.518139'
+                      welcome_message:
+                        type: string
+                        example: 'FOX MOVIES HD'
+                      max_idle:
+                        type: integer
+                        example: 9
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API SystemConfigController'
+  /api/get_theme:
+    get:
+      summary: ''
+      operationId: getApiGet_theme
+      description: ''
+      parameters:
+        -
+          in: query
+          name: room
+          description: 'The room number to fetch messages for.'
+          example: 102
+          required: true
+          schema:
+            type: string
+            description: 'The room number to fetch messages for.'
+            example: 102
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 2
+                    name: 'Theme Name'
+                    bg_uri: 'http://192.168.110.29:8080/storage/upload/themes/wbprwzgccismzqdagmplbbkgzsordy.png'
+                    created_at: '2025-04-21 10:24:55'
+                    updated_at: '2025-04-24 10:24:55'
+                    zones:
+                      -
+                        id: 2
+                        name: SampleZone
+                        bg_uri: 'http://192.168.110.29:8080/storage/upload/theme_zones/ihpdjwijndeemocbenduhxljogvrqp.png'
+                        text_color: '#ffffff'
+                        active_text_color: '#cccccc'
+                      -
+                        id: 3
+                        name: SampleZone
+                        bg_uri: 'http://192.168.110.29:8080/storage/upload/theme_zones/ahhexcwlxdtbuitmgzntdiqqxllhvq.png'
+                        text_color: '#ffffff'
+                        active_text_color: '#cccccc'
+                    applications:
+                      -
+                        id: 2
+                        name: 'Sample App'
+                        icon: 'http://192.168.110.29:8080/storage/upload/theme_applications/icon/lejajzxyztefpuzmwhizgvyvqclzza.png'
+                        active_icon: 'http://192.168.110.29:8080/storage/upload/theme_applications/active_icon/yxxcrinnjakfojtacgyemrjldulusu.png'
+                        text_color: '#ffffff'
+                        active_text_color: '#cccccc'
+                        order_no: 2
+                      -
+                        id: 3
+                        name: 'Sample App'
+                        icon: 'http://192.168.110.29:8080/storage/upload/theme_applications/icon/oevrpwtrifqrrkuiajvizatqofjsdm.png'
+                        active_icon: 'http://192.168.110.29:8080/storage/upload/theme_applications/active_icon/rpejusvulkyuwjixibrcmimlfwcito.png'
+                        text_color: '#ffffff'
+                        active_text_color: '#cccccc'
+                        order_no: 3
+                  result: success
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 2
+                      name:
+                        type: string
+                        example: 'Theme Name'
+                      bg_uri:
+                        type: string
+                        example: 'http://192.168.110.29:8080/storage/upload/themes/wbprwzgccismzqdagmplbbkgzsordy.png'
+                      created_at:
+                        type: string
+                        example: '2025-04-21 10:24:55'
+                      updated_at:
+                        type: string
+                        example: '2025-04-24 10:24:55'
+                      zones:
+                        type: array
+                        example:
+                          -
+                            id: 2
+                            name: SampleZone
+                            bg_uri: 'http://192.168.110.29:8080/storage/upload/theme_zones/ihpdjwijndeemocbenduhxljogvrqp.png'
+                            text_color: '#ffffff'
+                            active_text_color: '#cccccc'
+                          -
+                            id: 3
+                            name: SampleZone
+                            bg_uri: 'http://192.168.110.29:8080/storage/upload/theme_zones/ahhexcwlxdtbuitmgzntdiqqxllhvq.png'
+                            text_color: '#ffffff'
+                            active_text_color: '#cccccc'
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 2
+                            name:
+                              type: string
+                              example: SampleZone
+                            bg_uri:
+                              type: string
+                              example: 'http://192.168.110.29:8080/storage/upload/theme_zones/ihpdjwijndeemocbenduhxljogvrqp.png'
+                            text_color:
+                              type: string
+                              example: '#ffffff'
+                            active_text_color:
+                              type: string
+                              example: '#cccccc'
+                      applications:
+                        type: array
+                        example:
+                          -
+                            id: 2
+                            name: 'Sample App'
+                            icon: 'http://192.168.110.29:8080/storage/upload/theme_applications/icon/lejajzxyztefpuzmwhizgvyvqclzza.png'
+                            active_icon: 'http://192.168.110.29:8080/storage/upload/theme_applications/active_icon/yxxcrinnjakfojtacgyemrjldulusu.png'
+                            text_color: '#ffffff'
+                            active_text_color: '#cccccc'
+                            order_no: 2
+                          -
+                            id: 3
+                            name: 'Sample App'
+                            icon: 'http://192.168.110.29:8080/storage/upload/theme_applications/icon/oevrpwtrifqrrkuiajvizatqofjsdm.png'
+                            active_icon: 'http://192.168.110.29:8080/storage/upload/theme_applications/active_icon/rpejusvulkyuwjixibrcmimlfwcito.png'
+                            text_color: '#ffffff'
+                            active_text_color: '#cccccc'
+                            order_no: 3
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              example: 2
+                            name:
+                              type: string
+                              example: 'Sample App'
+                            icon:
+                              type: string
+                              example: 'http://192.168.110.29:8080/storage/upload/theme_applications/icon/lejajzxyztefpuzmwhizgvyvqclzza.png'
+                            active_icon:
+                              type: string
+                              example: 'http://192.168.110.29:8080/storage/upload/theme_applications/active_icon/yxxcrinnjakfojtacgyemrjldulusu.png'
+                            text_color:
+                              type: string
+                              example: '#ffffff'
+                            active_text_color:
+                              type: string
+                              example: '#cccccc'
+                            order_no:
+                              type: integer
+                              example: 2
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API ThemeManagerController'
+  /api/get_tv_channel_categories:
+    get:
+      summary: ''
+      operationId: getApiGet_tv_channel_categories
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 2702
+                      name: Religious
+                      description: 'Sample Description'
+                      order_no: 27
+                    -
+                      id: 855
+                      name: News
+                      description: 'Sample Description'
+                      order_no: 13
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 2702
+                        name: Religious
+                        description: 'Sample Description'
+                        order_no: 27
+                      -
+                        id: 855
+                        name: News
+                        description: 'Sample Description'
+                        order_no: 13
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 2702
+                        name:
+                          type: string
+                          example: Religious
+                        description:
+                          type: string
+                          example: 'Sample Description'
+                        order_no:
+                          type: integer
+                          example: 27
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API TvChannelCategoryController'
+  /api/get_tv_channels:
+    get:
+      summary: ''
+      operationId: getApiGet_tv_channels
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 508251
+                      channel: 67
+                      name: NICKELODEON
+                      description: 'Sample Description'
+                      channel_uri: 137061
+                      category_id: 5014278
+                      order_no: 25
+                      image_uri: 'http://192.168.110.29:8080/storage/upload/tv_channels/fukbsjprfajfzvzflghjhehnptvfqk.png'
+                    -
+                      id: 5926575
+                      channel: 62
+                      name: 'BBC Earth'
+                      description: 'Sample Description'
+                      channel_uri: 63
+                      category_id: 41562971
+                      order_no: 5
+                      image_uri: 'http://192.168.110.29:8080/storage/upload/tv_channels/roouesilnqkdbtukwunktrovymitkd.png'
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 508251
+                        channel: 67
+                        name: NICKELODEON
+                        description: 'Sample Description'
+                        channel_uri: 137061
+                        category_id: 5014278
+                        order_no: 25
+                        image_uri: 'http://192.168.110.29:8080/storage/upload/tv_channels/fukbsjprfajfzvzflghjhehnptvfqk.png'
+                      -
+                        id: 5926575
+                        channel: 62
+                        name: 'BBC Earth'
+                        description: 'Sample Description'
+                        channel_uri: 63
+                        category_id: 41562971
+                        order_no: 5
+                        image_uri: 'http://192.168.110.29:8080/storage/upload/tv_channels/roouesilnqkdbtukwunktrovymitkd.png'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 508251
+                        channel:
+                          type: integer
+                          example: 67
+                        name:
+                          type: string
+                          example: NICKELODEON
+                        description:
+                          type: string
+                          example: 'Sample Description'
+                        channel_uri:
+                          type: integer
+                          example: 137061
+                        category_id:
+                          type: integer
+                          example: 5014278
+                        order_no:
+                          type: integer
+                          example: 25
+                        image_uri:
+                          type: string
+                          example: 'http://192.168.110.29:8080/storage/upload/tv_channels/fukbsjprfajfzvzflghjhehnptvfqk.png'
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API TvChannelController'
+  /api/get_video_ads:
+    get:
+      summary: ''
+      operationId: getApiGet_video_ads
+      description: ''
+      parameters:
+        -
+          in: query
+          name: room
+          description: 'The room number.'
+          example: 102
+          required: true
+          schema:
+            type: string
+            description: 'The room number.'
+            example: 102
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 17
+                      name: 'Test 22'
+                      video_uri: 'http://192.168.110.29:8080/storage/upload/video_ads/ahokwgphsudjzdzuctpdbregwwrjqk.mp4'
+                      is_enable: 1
+                      order_no: 1
+                      created_at: '2025-04-21 10:24:55'
+                      updated_at: '2025-04-24 10:24:55'
+                    -
+                      id: 17
+                      name: 'Test 22'
+                      video_uri: 'http://192.168.110.29:8080/storage/upload/video_ads/gnixbuodumwmjxufmodcjtsvuqniij.mp4'
+                      is_enable: 1
+                      order_no: 1
+                      created_at: '2025-04-21 10:24:55'
+                      updated_at: '2025-04-24 10:24:55'
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 17
+                        name: 'Test 22'
+                        video_uri: 'http://192.168.110.29:8080/storage/upload/video_ads/ahokwgphsudjzdzuctpdbregwwrjqk.mp4'
+                        is_enable: 1
+                        order_no: 1
+                        created_at: '2025-04-21 10:24:55'
+                        updated_at: '2025-04-24 10:24:55'
+                      -
+                        id: 17
+                        name: 'Test 22'
+                        video_uri: 'http://192.168.110.29:8080/storage/upload/video_ads/gnixbuodumwmjxufmodcjtsvuqniij.mp4'
+                        is_enable: 1
+                        order_no: 1
+                        created_at: '2025-04-21 10:24:55'
+                        updated_at: '2025-04-24 10:24:55'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 17
+                        name:
+                          type: string
+                          example: 'Test 22'
+                        video_uri:
+                          type: string
+                          example: 'http://192.168.110.29:8080/storage/upload/video_ads/ahokwgphsudjzdzuctpdbregwwrjqk.mp4'
+                        is_enable:
+                          type: integer
+                          example: 1
+                        order_no:
+                          type: integer
+                          example: 1
+                        created_at:
+                          type: string
+                          example: '2025-04-21 10:24:55'
+                        updated_at:
+                          type: string
+                          example: '2025-04-24 10:24:55'
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API VideoAdsController'
+  /api/curl_weather_api_for_hourly_forecast:
+    get:
+      summary: ''
+      operationId: getApiCurl_weather_api_for_hourly_forecast
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  result: success
+                  message: 'Weather data updated successfully.'
+                properties:
+                  result:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: 'Weather data updated successfully.'
+      tags:
+        - 'API WeatherController'
+  /api/curl_weather_api_for_daily_forecast:
+    get:
+      summary: ''
+      operationId: getApiCurl_weather_api_for_daily_forecast
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  result: success
+                  message: 'Weather data updated successfully.'
+                properties:
+                  result:
+                    type: string
+                    example: success
+                  message:
+                    type: string
+                    example: 'Weather data updated successfully.'
+      tags:
+        - 'API WeatherController'
+  /api/get_weather_daily_forecast:
+    get:
+      summary: ''
+      operationId: getApiGet_weather_daily_forecast
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 97552
+                      date: '2025-04-30 01:28:38'
+                      description: 'Mainly clear'
+                      humidity: '64.72'
+                      icon: '1'
+                      wind_speed: 580.17
+                      sunrise: null
+                      sunset: null
+                      temp_day: 245.31
+                      temp_min: 670.54
+                      temp_max: 990.09
+                      temp_night: 887.64
+                      temp_eve: 875
+                      temp_morn: 263.45
+                      pressure: 46
+                      dew_point: 111.08
+                    -
+                      id: 3326697
+                      date: null
+                      description: 'Thunderstorm: Violent'
+                      humidity: '276.95'
+                      icon: '10'
+                      wind_speed: 83.2
+                      sunrise: null
+                      sunset: '2025-04-30 11:23:20'
+                      temp_day: 669.07
+                      temp_min: 802.04
+                      temp_max: 578.13
+                      temp_night: 353.45
+                      temp_eve: 555.37
+                      temp_morn: 980.11
+                      pressure: 311
+                      dew_point: 902.04
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 97552
+                        date: '2025-04-30 01:28:38'
+                        description: 'Mainly clear'
+                        humidity: '64.72'
+                        icon: '1'
+                        wind_speed: 580.17
+                        sunrise: null
+                        sunset: null
+                        temp_day: 245.31
+                        temp_min: 670.54
+                        temp_max: 990.09
+                        temp_night: 887.64
+                        temp_eve: 875
+                        temp_morn: 263.45
+                        pressure: 46
+                        dew_point: 111.08
+                      -
+                        id: 3326697
+                        date: null
+                        description: 'Thunderstorm: Violent'
+                        humidity: '276.95'
+                        icon: '10'
+                        wind_speed: 83.2
+                        sunrise: null
+                        sunset: '2025-04-30 11:23:20'
+                        temp_day: 669.07
+                        temp_min: 802.04
+                        temp_max: 578.13
+                        temp_night: 353.45
+                        temp_eve: 555.37
+                        temp_morn: 980.11
+                        pressure: 311
+                        dew_point: 902.04
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 97552
+                        date:
+                          type: string
+                          example: '2025-04-30 01:28:38'
+                        description:
+                          type: string
+                          example: 'Mainly clear'
+                        humidity:
+                          type: string
+                          example: '64.72'
+                        icon:
+                          type: string
+                          example: '1'
+                        wind_speed:
+                          type: number
+                          example: 580.17
+                        sunrise:
+                          type: string
+                          example: null
+                        sunset:
+                          type: string
+                          example: null
+                        temp_day:
+                          type: number
+                          example: 245.31
+                        temp_min:
+                          type: number
+                          example: 670.54
+                        temp_max:
+                          type: number
+                          example: 990.09
+                        temp_night:
+                          type: number
+                          example: 887.64
+                        temp_eve:
+                          type: integer
+                          example: 875
+                        temp_morn:
+                          type: number
+                          example: 263.45
+                        pressure:
+                          type: integer
+                          example: 46
+                        dew_point:
+                          type: number
+                          example: 111.08
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API WeatherController'
+  /api/get_weather_hourly_forecast:
+    get:
+      summary: ''
+      operationId: getApiGet_weather_hourly_forecast
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 3228004
+                      date: null
+                      description: 'Freezing Rain: Heavy intensity'
+                      humidity: '848.2'
+                      icon: '10'
+                      temp: 573.36
+                      wind_speed: 418.52
+                    -
+                      id: 7359
+                      date: null
+                      description: 'Freezing Rain: Light intensity'
+                      humidity: '620.59'
+                      icon: '4'
+                      temp: 561.87
+                      wind_speed: 283.05
+                  result: success
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 3228004
+                        date: null
+                        description: 'Freezing Rain: Heavy intensity'
+                        humidity: '848.2'
+                        icon: '10'
+                        temp: 573.36
+                        wind_speed: 418.52
+                      -
+                        id: 7359
+                        date: null
+                        description: 'Freezing Rain: Light intensity'
+                        humidity: '620.59'
+                        icon: '4'
+                        temp: 561.87
+                        wind_speed: 283.05
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 3228004
+                        date:
+                          type: string
+                          example: null
+                        description:
+                          type: string
+                          example: 'Freezing Rain: Heavy intensity'
+                        humidity:
+                          type: string
+                          example: '848.2'
+                        icon:
+                          type: string
+                          example: '10'
+                        temp:
+                          type: number
+                          example: 573.36
+                        wind_speed:
+                          type: number
+                          example: 418.52
+                  result:
+                    type: string
+                    example: success
+      tags:
+        - 'API WeatherController'
+tags:
+  -
+    name: ''
+    description: ''
+  -
+    name: 'API AnalyticController'
+    description: "\nAnalytics."
+  -
+    name: 'API AuthController'
+    description: "\nAuth."
+  -
+    name: 'API BroadcastMessagingController'
+    description: "\nBroadcast Messaging."
+  -
+    name: 'API DeviceController'
+    description: "\nDevice."
+  -
+    name: 'API FacilityCategoryController'
+    description: "\nFacility Category."
+  -
+    name: 'API FacilityController'
+    description: "\nFacility."
+  -
+    name: 'API FnbCategoryController'
+    description: "\nFnb Category."
+  -
+    name: 'API FnbController'
+    description: "\nFnb."
+  -
+    name: 'API GuestBillingController'
+    description: "\nGuest Billing."
+  -
+    name: 'API HotelInfoController'
+    description: "\nHotel Info."
+  -
+    name: 'API ItemRequestController'
+    description: "\nItem Request."
+  -
+    name: 'API RegularMessageController'
+    description: "\nRegularMessage."
+  -
+    name: 'API RoomAssignment Controller'
+    description: "\nRoom Assignment."
+  -
+    name: 'API RoomCategoryController'
+    description: "\nRoom Category."
+  -
+    name: 'API RoomController'
+    description: "\nRoom."
+  -
+    name: 'API ServiceRequestController'
+    description: "\nService Request."
+  -
+    name: 'API SystemConfigController'
+    description: "\nSystem Config."
+  -
+    name: 'API ThemeManagerController'
+    description: "\nThemeManager."
+  -
+    name: 'API TvChannelCategoryController'
+    description: "\nTv Channel Category."
+  -
+    name: 'API TvChannelController'
+    description: "\nTv Channel."
+  -
+    name: 'API VideoAdsController'
+    description: "\nVideo Ads."
+  -
+    name: 'API WeatherController'
+    description: "\nWeather."

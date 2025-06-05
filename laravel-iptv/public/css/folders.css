@@ -1,0 +1,126 @@
+.folder-widget-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+#financial-reports-fm-menu .fm-menu .list-group .selected,
+#financial-reports-fm-menu .fm-menu .list-group a:hover {
+    color: #ab404b;
+    background: #ffc4ca;
+    transition: all 0.2s ease-out;
+}
+
+#knowledge-base-fm-menu .fm-menu .list-group .selected,
+#knowledge-base-fm-menu .fm-menu .list-group a:hover {
+    background: #ffe4fd;
+    color: #b834af;
+    transition: all 0.2s ease-out;
+}
+
+.financial-reports-all-folder-card,
+.financial-reports-folder-card,
+.knowledge-base-all-folder-card,
+.knowledge-base-folder-card {
+    cursor: pointer;
+}
+
+.financial-reports-folder-card-selected,
+.financial-reports-folder-card:hover {
+    background: #ffc4cabf  !important;
+}
+
+.knowledge-base-folder-card-selected,
+.knowledge-base-folder-card:hover {
+    background: #b834af3b !important;
+    border: solid 2px #b837af !important;
+    transition: all ease-in-out 300ms;
+}
+
+
+.knowledge-base-sea-folder-card-selected,
+.knowledge-base-sea-folder-card:hover,
+.knowledge-base-sop-folder-card-selected,
+.knowledge-base-sop-folder-card:hover {
+    background: #8bef9857 !important;
+}
+
+.knowledge-base-cf-folder-card-selected,
+.knowledge-base-cf-folder-card:hover,
+.knowledge-base-pnp-folder-card-selected,
+.knowledge-base-pnp-folder-card:hover {
+    background: rgb(230 46 46 / 15%) !important;
+}
+
+.knowledge-base-xpl-folder-card-selected,
+.knowledge-base-xpl-folder-card:hover,
+.knowledge-base-process-documents-folder-card-selected,
+.knowledge-base-process-documents-folder-card:hover {
+    background: rgb(13 202 240 / 18%) !important;
+}
+
+.knowledge-base-pp-folder-card-selected,
+.knowledge-base-pp-folder-card:hover,
+.knowledge-base-how-to-guide-folder-card-selected,
+.knowledge-base-how-to-guide-folder-card:hover {
+    background: #15a0a340 !important;
+}
+
+.knowledge-base-board-of-pharmacy-folder-card-selected,
+.knowledge-base-board-of-pharmacy-folder-card:hover {
+    background: rgb(41 204 57 / 15%) !important;
+}
+
+.knowledge-base-pharmacy-forms-folder-card-selected,
+.knowledge-base-pharmacy-forms-folder-card:hover {
+    background: rgb(255 193 7 / 0.11) !important;
+}
+
+#clinical-fm-menu .fm-menu .list-group .selected,
+#clinical-fm-menu .fm-menu .list-group a:hover {
+    /* background: #e4cdf8 !important;
+    color: #5d5069 !important; */
+    background: #dff7e1;
+    color: #15ca20;
+    transition: all 0.2s ease-out;
+}
+
+.highlighted {
+    background-color: yellow !important;
+    /* Set your desired highlight color */
+    font-weight: bold !important;
+    /* Apply bold font weight to highlighted text */
+}
+
+.attachment-label-color {
+    color: #277b8b;
+}
+
+.knowledge-base-file-name {
+    cursor: pointer;
+}
+
+.knowledge-base-file-name:hover {
+    color: #b834af;
+    font-weight: 500;
+}
+
+.bg-sop-folder {
+    background-color: #382365;
+    border: solid 2px #382365;
+}
+
+.bg-pnp-folder {
+    background-color: #f9a848;
+    border: solid 2px #f9a848;
+}
+
+.bg-process-documents-folder {
+    background-color: #33aebf;
+    border: solid 2px #33aebf;
+}
+
+.bg-how-to-guide-folder {
+    background-color: #f1145a;
+    border: solid 2px #f1145a;
+}

@@ -1,0 +1,1736 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost"
+        }
+    ],
+    "info": {
+        "name": "MeshtvIPTV",
+        "_postman_id": "7fb7adbd-a021-4d2a-afa9-865389c594aa",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/aiello\/toggleTvPower",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/aiello\/toggleTvPower",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/aiello\/toggleTvPower"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/aiello\/volumeChange",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/aiello\/volumeChange",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/aiello\/volumeChange"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/aiello\/getTvChannels",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/aiello\/getTvChannels",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/aiello\/getTvChannels"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\n    \"message\": \"Server Error\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/aiello\/openApplication",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/aiello\/openApplication",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/aiello\/openApplication"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/aiello\/changeTvChannel",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/aiello\/changeTvChannel",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/aiello\/changeTvChannel"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "API AnalyticController",
+            "description": "\nAnalytics.",
+            "item": [
+                {
+                    "name": "GET api\/get_analytic_type",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_analytic_type",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_analytic_type"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":6,\"category_key\":\"Application\",\"type_id\":44,\"item_id\":29,\"room_id\":29},{\"id\":79802,\"category_key\":\"TV\",\"type_id\":32,\"item_id\":25,\"room_id\":40}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/analytics",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/analytics",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/analytics"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"data\":[{\"counter\":3,\"type_id\":2,\"item_id\":2,\"room_id\":2}]}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":[{\"id\":83032945,\"category_key\":\"Application\",\"type_id\":37,\"item_id\":22,\"room_id\":50},{\"id\":6702,\"category_key\":\"Application\",\"type_id\":35,\"item_id\":24,\"room_id\":20}],\"result\":\"success\",\"message\":\"Analytics created successfully\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API AuthController",
+            "description": "\nAuth.",
+            "item": [
+                {
+                    "name": "POST api\/stb_register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/stb_register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/stb_register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"data\":{\"api_key\":\"e2b9a548f72c0f2b63b822e0ab734cd8\",\"mac_address\":\"c44eac205e9c\",\"room_number\":\"105\",\"version\":\"4.1\",\"area_id\":\"1\"}}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":{\"device_id\":5,\"room\":\"105\",\"username\":\"c44eac205e6b\",\"version\":\"5.0\",\"class\":\"stb_register\"},\"room_number\":\"105\",\"result\":\"success\",\"message\":\"STB has been registered\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"data\":{\"name\":\"c44eac205e6b\",\"password\":\"2b9e031e600bb7a40e3a57ba6e0df8d4\"}}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":{\"id\":244,\"name\":\"c44eac205e6b\",\"firstname\":null,\"lastname\":null,\"email\":\"wkeebler@example.com\",\"email_verified_at\":\"2025-04-24T02:24:54.000000Z\",\"role_id\":3,\"image\":null,\"initials_random_color\":null,\"is_stb\":0,\"created_at\":\"2025-04-24 10:24:54\",\"updated_at\":\"2025-04-24 10:24:54\"},\"token\":\"24|fDeOD181eJOROGKvGxdDMSnEC8A6fwduMqVAeROcace50f17\",\"result\":\"success\",\"message\":\"Successfully login!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/check_token",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/check_token",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/check_token"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"result\":\"failed\",\"message\":\"Invalid token.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/stb_time",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/stb_time",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/stb_time"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"data\":[],\"result\":\"failed\",\"reason\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API BroadcastMessagingController",
+            "description": "\nBroadcast Messaging.",
+            "item": [
+                {
+                    "name": "GET api\/get_broadcast_messaging",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_broadcast_messaging",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "11",
+                                    "description": "The ticker' id.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/get_broadcast_messaging?id=11"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":5,\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/broadcast_message\\\/advertisements\\\/bCE61HJr6cf1kAPPmQ4qxqSSYDLUN15pnVAMuceM.jpg\",\"duration\":\"5\",\"message\":\"This is Broadcast Messaging.\",\"broadcast_type\":{\"id\":\"6\",\"name\":\"Ticker\"}},\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API DeviceController",
+            "description": "\nDevice.",
+            "item": [
+                {
+                    "name": "GET api\/enter_netflix",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/enter_netflix",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/enter_netflix"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"result\":\"Current focus is not com.netflix.ninja, it is:\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/clear_cache",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/clear_cache",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/clear_cache"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"result\":\"127.0.0.1\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/get_language",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_language",
+                            "query": [
+                                {
+                                    "key": "room",
+                                    "value": "102",
+                                    "description": "The room number to fetch messages for.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/get_language?room=102"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":75,\"name\":\"Arabic\"},\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/get_wifi_qr_code",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_wifi_qr_code",
+                            "query": [
+                                {
+                                    "key": "mac_address",
+                                    "value": "900eb3510b0b",
+                                    "description": "The mac address of specific device.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/get_wifi_qr_code?mac_address=900eb3510b0b"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"path\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/qr_code\\\/192.168.110.204_900eb3510b0b.png\"},\"message\":\"QR Code generated successfully\",\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API FacilityCategoryController",
+            "description": "\nFacility Category.",
+            "item": [
+                {
+                    "name": "GET api\/get_facility_categories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_facility_categories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_facility_categories"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":9,\"name\":\"Jaskolski, Marvin and Purdy\",\"description\":\"Mollitia dicta est est voluptates. Ut blanditiis officia numquam eligendi. Pariatur sunt explicabo pariatur magnam quis. Debitis omnis eum consectetur vel.\",\"img_preview_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/facility_categories\\\/wivchxyuhzorskaanlxbumccynjvmq.png\",\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/facility_categories\\\/zhffrtfhdpngwwmntnvuhlnojhsbip.png\",\"order_no\":993005322},{\"id\":2524405,\"name\":\"Kozey, Dickens and Fahey\",\"description\":\"Quibusdam dolores atque illum labore ut aut ut aut. Quasi explicabo est culpa non laboriosam. Ea sit id ipsa qui cum velit ut porro. Officia blanditiis quas et.\",\"img_preview_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/facility_categories\\\/lmghrzpxadlkwntmgxfzybmxjcwjiv.png\",\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/facility_categories\\\/kraouwefsrvxudjidrjamzfrztzqvy.png\",\"order_no\":769}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API FacilityController",
+            "description": "\nFacility.",
+            "item": [
+                {
+                    "name": "GET api\/get_facilities",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_facilities",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_facilities"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":762,\"name\":\"Bernhard-Senger\",\"description\":\"Fugit qui mollitia amet asperiores provident voluptatem. Totam quo iusto cumque consequuntur. Non dolores minus nostrum deserunt vel. Perspiciatis nihil nobis esse neque dolor quod. Qui sed aut ipsa.\",\"unit_price\":269.47,\"category_id\":1187,\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/facilities\\\/wnilcpgfpfswwkxzodvbmomnybrrdh.png\"},{\"id\":70380640,\"name\":\"McClure, Bernier and Kozey\",\"description\":\"Asperiores molestias quae aut ut et et. Iusto laboriosam vero voluptatem inventore nihil dignissimos.\",\"unit_price\":\"711.28\",\"category_id\":2,\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/facilities\\\/selycyoortnlfbzsaotawbhjygryuc.png\"}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API FnbCategoryController",
+            "description": "\nFnb Category.",
+            "item": [
+                {
+                    "name": "GET api\/get_fnb_categories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_fnb_categories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_fnb_categories"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":931453144,\"name\":\"Breakfast\",\"description\":\"Assumenda omnis ut molestias debitis quas. Quas quis dolor voluptate. Dolorem quia dolorem totam iure blanditiis. Accusantium suscipit aliquam quisquam expedita nam.\",\"order_no\":350},{\"id\":264,\"name\":\"Dinner\",\"description\":\"Omnis eligendi aut quibusdam aut possimus. Aut dolor mollitia rerum possimus dolorem error. Rerum at amet numquam. Excepturi excepturi quis doloribus facilis assumenda aut.\",\"order_no\":223321}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API FnbController",
+            "description": "\nFnb.",
+            "item": [
+                {
+                    "name": "GET api\/get_fnbs",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_fnbs",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_fnbs"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":62631,\"name\":\"Sushi\",\"description\":\"Architecto quae autem saepe. Optio nesciunt sed ea ut modi. Facere accusamus odit quisquam. Aut laudantium consequatur similique.\",\"unit_price\":949.93,\"category_id\":2524,\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/facilities\\\/lgaczjbxskqzykeotjsfaouqvpxxfx.png\"},{\"id\":2357,\"name\":\"Curry\",\"description\":\"Sunt voluptates facere possimus. Voluptas veritatis aliquid aperiam et eveniet. Est repellendus id animi labore.\",\"unit_price\":237.37,\"category_id\":542954260,\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/facilities\\\/bgpxjxgezfbqvshwrcffjpnwsetvif.png\"}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/get_recommended_fnbs",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_recommended_fnbs",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_recommended_fnbs"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":504813683,\"name\":\"Dumplings\",\"description\":\"Rem ipsam ipsam est nam. Aut quas ipsum deserunt maiores est ex. Iure vel id labore numquam deserunt est. Maiores pariatur porro perspiciatis beatae voluptatem sint.\",\"unit_price\":316.59,\"category_id\":0,\"popularity_score\":58,\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/facilities\\\/aluklbyddqvoquemmzwnsumuppoplb.png\"},{\"id\":1122977,\"name\":\"Steak\",\"description\":\"Aut est tempore fugiat alias similique iste. Necessitatibus beatae cumque nostrum sed rem. Omnis omnis quas adipisci vel. Eos dolorem in et debitis cum cum voluptatem sit.\",\"unit_price\":102.99,\"category_id\":0,\"popularity_score\":31448017,\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/facilities\\\/ucnwryqzwgywitumfadscjbpumubcc.png\"}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API GuestBillingController",
+            "description": "\nGuest Billing.",
+            "item": [
+                {
+                    "name": "POST api\/mesh_transaction",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/mesh_transaction",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/mesh_transaction"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"data\":[{\"room_id\":101,\"type\":\"fnb\",\"item_id\":1,\"quantity\":2,\"unit_price\":29.99,\"room_assignment_id\":1},{\"room_id\":101,\"type\":\"item_request\",\"item_id\":2,\"quantity\":1,\"unit_price\":550,\"room_assignment_id\":1}]}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":[{\"id\":800,\"transaction_datetime\":\"2000-01-07 22:01:04\",\"room_number\":\"101\",\"room_id\":1,\"category\":\"service_request\",\"item_name\":\"Curry\",\"item_id\":171356,\"quantity\":7,\"unit_price\":\"9.00\",\"refno\":\"59330872\",\"status\":\"Cancelled\",\"status_id\":14,\"user\":\"STB\",\"user_id\":1,\"reserve_no\":null,\"notes\":null,\"is_paid\":0,\"room_assignment_id\":5,\"guest_name\":\"Earline O'Reilly\",\"created_at\":\"2025-01-28 00:17:11\",\"updated_at\":\"2024-07-25 11:34:00\"},{\"id\":801,\"transaction_datetime\":\"1994-11-28 02:19:32\",\"room_number\":\"101\",\"room_id\":1,\"category\":\"fnb\",\"item_name\":\"Curry\",\"item_id\":443115708,\"quantity\":3,\"unit_price\":\"8.00\",\"refno\":\"24695016\",\"status\":\"Delivered\",\"status_id\":12,\"user\":\"STB\",\"user_id\":1,\"reserve_no\":null,\"notes\":null,\"is_paid\":0,\"room_assignment_id\":5,\"guest_name\":\"Mr. Abner King I\",\"created_at\":\"2025-03-15 18:24:56\",\"updated_at\":\"2025-03-08 06:54:08\"}],\"result\":\"success\",\"message\":\"Guest Billing created successfully\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API HotelInfoController",
+            "description": "\nHotel Info.",
+            "item": [
+                {
+                    "name": "GET api\/get_hotel_infos",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_hotel_infos",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_hotel_infos"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":5262,\"name\":\"O'Keefe, Bogan and Kuvalis\",\"description\":\"Et maxime dolore in quas fugit sint eos. Praesentium perspiciatis est molestiae eum provident. Possimus ut labore omnis ullam.\",\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/hotel_infos\\\/ujgdzysukfmctdpvkstuxhjkhhlljc.png\",\"order_no\":167795370},{\"id\":623663,\"name\":\"Macejkovic, Pollich and Barton\",\"description\":\"Nobis et modi atque tempora aspernatur neque. Qui ipsam quisquam dolorum. Qui impedit sed esse impedit magnam. Soluta suscipit ut sequi adipisci dolorem sint impedit.\",\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/hotel_infos\\\/mvwevatofvermnboabkfngzkqxfmie.png\",\"order_no\":386}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API ItemRequestController",
+            "description": "\nItem Request.",
+            "item": [
+                {
+                    "name": "GET api\/get_item_requests",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_item_requests",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_item_requests"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":9841,\"name\":\"Herzog Group\",\"description\":\"Aspernatur dolorem modi blanditiis ut ipsam et. Quia esse tenetur nulla. Qui asperiores inventore beatae sit aut accusantium.\",\"unit_price\":\"275.84\",\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/item_request\\\/bjcekziklxnqybttvvgfedmtjrqyrm.png\",\"order_no\":null,\"deleted_at\":null},{\"id\":91476886,\"name\":\"Huels LLC\",\"description\":\"Sunt officiis consequatur nihil enim neque consequuntur magnam quos. Non dolorem quisquam non. Praesentium quis excepturi aut deleniti non pariatur. Tempora vel sit omnis ullam sed pariatur et.\",\"unit_price\":\"229.04\",\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/item_request\\\/yhmzsavfjnokqiresvioelvgbeeofs.png\",\"order_no\":null,\"deleted_at\":null}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API RegularMessageController",
+            "description": "\nRegularMessage.",
+            "item": [
+                {
+                    "name": "GET api\/get_message",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_message",
+                            "query": [
+                                {
+                                    "key": "room",
+                                    "value": "102",
+                                    "description": "The room number to fetch messages for.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/get_message?room=102"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":74589,\"regular_message_id\":984,\"room_id\":418,\"status_id\":7,\"created_at\":\"2025-04-29 16:31:18\",\"updated_at\":\"2025-04-29 16:31:18\",\"status\":{\"id\":7,\"title\":\"Seen\"},\"from\":\"Me\",\"subject\":\"Subject\",\"body\":\"<p>Test<\\\/p>\"},{\"id\":44267,\"regular_message_id\":34,\"room_id\":565561,\"status_id\":9888,\"created_at\":\"2025-04-24 22:39:43\",\"updated_at\":\"2025-04-24 22:39:43\",\"status\":{\"id\":9888,\"title\":\"Seen\"},\"from\":\"Me\",\"subject\":\"Subject\",\"body\":\"<p>Test<\\\/p>\"}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/read_message",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/read_message",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/read_message"
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"data\":{\"room\":\"autem\",\"message_recipient_id\":14}}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"result\": \"success\",\n  \"message\": \"Record has been updated.\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/delete_message",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/delete_message",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/delete_message"
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"data\":{\"room\":\"temporibus\",\"message_recipient_id\":5}}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"result\": \"success\",\n  \"message\": \"Record has been deleted.\"\n}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API RoomAssignment Controller",
+            "description": "\nRoom Assignment.",
+            "item": [
+                {
+                    "name": "GET api\/get_customer",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_customer",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_customer"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"customer_id\":448312549,\"room_id\":4806625,\"check_in\":\"2025-04-23 07:14:56\",\"check_out\":\"2025-04-25 08:41:11\",\"s_check_out\":\"2025-04-30 16:08:29\",\"reserve_no\":\"RES53594\",\"cs\":1,\"gs\":1,\"is_checkout\":0,\"guest\":{\"id\":777475,\"title\":\"Ms\",\"firstname\":\"Axel\",\"lastname\":\"Balistreri\",\"birthdate\":\"2012-11-11\",\"street1\":null,\"street2\":\"Apt. 660\",\"city\":\"Kaciefurt\",\"state_region\":\"Nebraska\",\"country_id\":\"8\",\"zip_code\":\"10218\",\"mobile_no\":\"+1-360-878-8217\",\"landline_no\":\"(724) 959-4869\",\"email\":null}},\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API RoomCategoryController",
+            "description": "\nRoom Category.",
+            "item": [
+                {
+                    "name": "GET api\/get_room_categories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_room_categories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_room_categories"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1600171,\"name\":\"Bogan PLC\",\"description\":\"Aut officia laborum in sit doloremque aliquid. Sint magnam eos voluptate mollitia adipisci. Ut dolore exercitationem ea quia odit qui. Nihil quaerat quia id est veritatis.\",\"order_no\":293},{\"id\":17680981,\"name\":\"Hermiston Inc\",\"description\":\"Quis qui ea est autem. Amet incidunt qui sapiente quisquam aut nihil hic aut. Id numquam occaecati laudantium molestias. Quae ex est ipsa accusantium aut qui quia voluptatem.\",\"order_no\":198}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API RoomController",
+            "description": "\nRoom.",
+            "item": [
+                {
+                    "name": "GET api\/get_rooms",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_rooms",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_rooms"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":4,\"name\":971,\"category_id\":54611315,\"status\":{\"id\":93972029,\"name\":\"Available\"}},{\"id\":3921,\"name\":57917133,\"category_id\":271372,\"status\":{\"id\":6,\"name\":\"Available\"}}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API ServiceRequestController",
+            "description": "\nService Request.",
+            "item": [
+                {
+                    "name": "GET api\/get_service_requests",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_service_requests",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_service_requests"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":806,\"name\":\"Raynor Group\",\"description\":\"Perspiciatis aut nostrum consequatur debitis et modi. Neque tempora modi est ea. Nisi nobis doloremque officiis distinctio ipsum quis.\",\"unit_price\":\"670.12\",\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/service_request\\\/bmwpzmmvvyoqbhpvdplvjlrayzepek.png\",\"order_no\":null,\"deleted_at\":null},{\"id\":6959,\"name\":\"Smitham, Zieme and Pagac\",\"description\":\"Nam molestias sit eos asperiores. Aliquid placeat necessitatibus enim exercitationem porro nesciunt. Perferendis quas consectetur veritatis sit. Aut saepe et voluptatibus facilis.\",\"unit_price\":\"932.95\",\"img_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/service_request\\\/jxeqgjnijvfzqtlobcwuncjupvfygh.png\",\"order_no\":null,\"deleted_at\":null}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API SystemConfigController",
+            "description": "\nSystem Config.",
+            "item": [
+                {
+                    "name": "GET api\/get_system_config",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_system_config",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_system_config"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":601947,\"name\":\"FOX MOVIES HD\",\"description\":\"Nam ullam sit delectus. Aut rerum et maxime qui. Harum fugiat est laborum cupiditate fuga. Magnam explicabo similique maxime et asperiores magni.\",\"street\":\"Repellat voluptas enim eum nostrum odio. Accusamus laudantium omnis aliquid assumenda. Sunt dolor rerum aut ea velit ut ea. Maiores quidem voluptate nostrum ea et. Sint rerum corporis et saepe tempore impedit molestiae fugit. Repellat dignissimos in est deleniti et repellendus minus molestias.\",\"city\":\"ANIMAL PLANET\",\"country_code\":\"PF\",\"time_zone\":\"Europe\\\/Sofia\",\"email\":\"tkuvalis@example.com\",\"currency\":\"SCR\",\"website\":\"http:\\\/\\\/www.schimmel.com\\\/beatae-alias-nulla-voluptatem\",\"logo\":\"http:\\\/\\\/192.168.110.29:8080\\\/upload\\\/systemConfig\\\/uyrxdfgqcrcjaydtsbosumkyktckbd.png\",\"lat\":\"-46.788974\",\"lon\":\"63.518139\",\"welcome_message\":\"FOX MOVIES HD\",\"max_idle\":9},\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API ThemeManagerController",
+            "description": "\nThemeManager.",
+            "item": [
+                {
+                    "name": "GET api\/get_theme",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_theme",
+                            "query": [
+                                {
+                                    "key": "room",
+                                    "value": "102",
+                                    "description": "The room number to fetch messages for.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/get_theme?room=102"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":2,\"name\":\"Theme Name\",\"bg_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/themes\\\/wbprwzgccismzqdagmplbbkgzsordy.png\",\"created_at\":\"2025-04-21 10:24:55\",\"updated_at\":\"2025-04-24 10:24:55\",\"zones\":[{\"id\":2,\"name\":\"SampleZone\",\"bg_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/theme_zones\\\/ihpdjwijndeemocbenduhxljogvrqp.png\",\"text_color\":\"#ffffff\",\"active_text_color\":\"#cccccc\"},{\"id\":3,\"name\":\"SampleZone\",\"bg_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/theme_zones\\\/ahhexcwlxdtbuitmgzntdiqqxllhvq.png\",\"text_color\":\"#ffffff\",\"active_text_color\":\"#cccccc\"}],\"applications\":[{\"id\":2,\"name\":\"Sample App\",\"icon\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/theme_applications\\\/icon\\\/lejajzxyztefpuzmwhizgvyvqclzza.png\",\"active_icon\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/theme_applications\\\/active_icon\\\/yxxcrinnjakfojtacgyemrjldulusu.png\",\"text_color\":\"#ffffff\",\"active_text_color\":\"#cccccc\",\"order_no\":2},{\"id\":3,\"name\":\"Sample App\",\"icon\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/theme_applications\\\/icon\\\/oevrpwtrifqrrkuiajvizatqofjsdm.png\",\"active_icon\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/theme_applications\\\/active_icon\\\/rpejusvulkyuwjixibrcmimlfwcito.png\",\"text_color\":\"#ffffff\",\"active_text_color\":\"#cccccc\",\"order_no\":3}]},\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API TvChannelCategoryController",
+            "description": "\nTv Channel Category.",
+            "item": [
+                {
+                    "name": "GET api\/get_tv_channel_categories",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_tv_channel_categories",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_tv_channel_categories"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":2702,\"name\":\"Religious\",\"description\":\"Sample Description\",\"order_no\":27},{\"id\":855,\"name\":\"News\",\"description\":\"Sample Description\",\"order_no\":13}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API TvChannelController",
+            "description": "\nTv Channel.",
+            "item": [
+                {
+                    "name": "GET api\/get_tv_channels",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_tv_channels",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_tv_channels"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":508251,\"channel\":67,\"name\":\"NICKELODEON\",\"description\":\"Sample Description\",\"channel_uri\":137061,\"category_id\":5014278,\"order_no\":25,\"image_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/tv_channels\\\/fukbsjprfajfzvzflghjhehnptvfqk.png\"},{\"id\":5926575,\"channel\":62,\"name\":\"BBC Earth\",\"description\":\"Sample Description\",\"channel_uri\":63,\"category_id\":41562971,\"order_no\":5,\"image_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/tv_channels\\\/roouesilnqkdbtukwunktrovymitkd.png\"}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API VideoAdsController",
+            "description": "\nVideo Ads.",
+            "item": [
+                {
+                    "name": "GET api\/get_video_ads",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_video_ads",
+                            "query": [
+                                {
+                                    "key": "room",
+                                    "value": "102",
+                                    "description": "The room number.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/get_video_ads?room=102"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":17,\"name\":\"Test 22\",\"video_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/video_ads\\\/ahokwgphsudjzdzuctpdbregwwrjqk.mp4\",\"is_enable\":1,\"order_no\":1,\"created_at\":\"2025-04-21 10:24:55\",\"updated_at\":\"2025-04-24 10:24:55\"},{\"id\":17,\"name\":\"Test 22\",\"video_uri\":\"http:\\\/\\\/192.168.110.29:8080\\\/storage\\\/upload\\\/video_ads\\\/gnixbuodumwmjxufmodcjtsvuqniij.mp4\",\"is_enable\":1,\"order_no\":1,\"created_at\":\"2025-04-21 10:24:55\",\"updated_at\":\"2025-04-24 10:24:55\"}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "API WeatherController",
+            "description": "\nWeather.",
+            "item": [
+                {
+                    "name": "GET api\/curl_weather_api_for_hourly_forecast",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/curl_weather_api_for_hourly_forecast",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/curl_weather_api_for_hourly_forecast"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"result\": \"success\",\n  \"message\": \"Weather data updated successfully.\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/curl_weather_api_for_daily_forecast",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/curl_weather_api_for_daily_forecast",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/curl_weather_api_for_daily_forecast"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n  \"result\": \"success\",\n  \"message\": \"Weather data updated successfully.\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/get_weather_daily_forecast",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_weather_daily_forecast",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_weather_daily_forecast"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":97552,\"date\":\"2025-04-30 01:28:38\",\"description\":\"Mainly clear\",\"humidity\":\"64.72\",\"icon\":\"1\",\"wind_speed\":580.17,\"sunrise\":null,\"sunset\":null,\"temp_day\":245.31,\"temp_min\":670.54,\"temp_max\":990.09,\"temp_night\":887.64,\"temp_eve\":875,\"temp_morn\":263.45,\"pressure\":46,\"dew_point\":111.08},{\"id\":3326697,\"date\":null,\"description\":\"Thunderstorm: Violent\",\"humidity\":\"276.95\",\"icon\":\"10\",\"wind_speed\":83.2,\"sunrise\":null,\"sunset\":\"2025-04-30 11:23:20\",\"temp_day\":669.07,\"temp_min\":802.04,\"temp_max\":578.13,\"temp_night\":353.45,\"temp_eve\":555.37,\"temp_morn\":980.11,\"pressure\":311,\"dew_point\":902.04}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/get_weather_hourly_forecast",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get_weather_hourly_forecast",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get_weather_hourly_forecast"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer *TOKEN*"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":3228004,\"date\":null,\"description\":\"Freezing Rain: Heavy intensity\",\"humidity\":\"848.2\",\"icon\":\"10\",\"temp\":573.36,\"wind_speed\":418.52},{\"id\":7359,\"date\":null,\"description\":\"Freezing Rain: Light intensity\",\"humidity\":\"620.59\",\"icon\":\"4\",\"temp\":561.87,\"wind_speed\":283.05}],\"result\":\"success\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

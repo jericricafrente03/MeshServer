@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS tailedBeastEntity (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL ,
+    images TEXT,
+    jutsu TEXT,
+    natureType TEXT,
+    tools TEXT,
+    uniqueTraits TEXT
+);
+
+getAllTailBeasts:
+SELECT * FROM tailedBeastEntity;
+
+getTailBeastById:
+SELECT * FROM tailedBeastEntity
+WHERE id = ?;
+
+insertTailBeast:
+INSERT OR REPLACE INTO tailedBeastEntity(id,  name, images, jutsu, natureType, tools, uniqueTraits)
+VALUES (?, ?,?,?,?,?,?);
+
+deleteAllTailBeasts:
+DELETE FROM tailedBeastEntity;

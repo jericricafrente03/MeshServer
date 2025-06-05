@@ -1,0 +1,7 @@
+Project: Admnin+ Intranet 
+
+Description: The AdminPlus Intranet will serve as a digital workspace, providing employees with access to important company resources, tools, and information. It will streamline internal processes, facilitate knowledge sharing, and improve overall productivity by centralizing various functions and resources.
+
+Development Start Date: 05/24/2024
+
+URL: https://home.admin-88.co

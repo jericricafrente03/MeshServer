@@ -1,0 +1,32 @@
+CREATE TABLE IF NOT EXISTS akatsuki_table (
+    id TEXT PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    images TEXT, -- JSON array as String
+    jutsu TEXT, -- JSON array as String
+    natureType TEXT, -- JSON array as String
+    tools TEXT, -- JSON array as String
+
+    father TEXT,
+    mother TEXT,
+    brother TEXT,
+    daughter TEXT,
+    wife TEXT,
+
+    birthdate TEXT,
+    bloodType TEXT,
+    sex TEXT
+);
+
+selectAllAkatsuki:
+SELECT * FROM akatsuki_table;
+
+selectAkatsukiById:
+SELECT * FROM akatsuki_table WHERE id = ?;
+
+insertAkatsuki:
+INSERT OR REPLACE INTO akatsuki_table(
+    id, name, images, jutsu, natureType, tools, father, mother, brother, daughter, wife, birthdate, sex, bloodType
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?);
+
+deleteAllAkatsuki:
+DELETE FROM akatsuki_table;

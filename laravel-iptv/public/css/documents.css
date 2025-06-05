@@ -1,0 +1,238 @@
+/* All files custom color */
+.bg-soft-orange {
+    background-color: #fcd0b2;
+    border: solid 2px #fcd0b2;
+}
+  
+.bg-all-files {
+    border: solid 2px #fabe86;
+}
+  
+.bg-all-files:hover {
+    background-color: #fcd0b2;
+}
+  
+.text-all-files,
+.text-all-files:hover {
+    background-color: #fabe86;
+    color: #faec86;
+}
+  
+  /* SOP custom color */
+.bg-soft-magenta {
+    background-color: #e2acdf;
+    border: solid 2px #e2acdf;
+}
+  
+.bg-sop {
+    border: solid 2px #b837af;
+}
+  
+.bg-sop:hover {
+    background-color: #ffc9fc;
+    color: #b837af;
+}
+  
+.text-sop {
+    background-color: #e2acdf;
+    color: #b837af;
+}
+  
+.container .selected-sop {
+    background-color: #ffc9fc;
+    border: solid 2px #b837af;
+}
+  
+  /* P&P custom color */
+.bg-soft-yellow-green {
+    background-color: #e1eabb;
+    border: solid 2px #e1eabb;
+}
+  
+.bg-pnp {
+    border: solid 2px #96b612;
+    color: #96b612;
+}
+  
+.bg-pnp:hover {
+    background-color: #e1eabb;
+    color: #96b612;
+}
+  
+.text-pnp {
+    background-color: #f5fdd5;
+    color: #96b612;
+}
+  
+.container .selected-pnp {
+    background-color: #e1eabb;
+    border: solid 2px #96b612;
+}
+  
+  /* proccess document custom color */
+.bg-sky-blue {
+    background-color: #d2f5fc;
+    border: solid 2px #d2f5fc;
+}
+  
+.bg-pd {
+    border: solid 2px #20caf0;
+}
+  
+.bg-pd:hover {
+    background-color: #f0fdff;
+    color: #20caf0;
+}
+  
+.text-pd {
+    background-color: #d2f5fc;
+    color: #20caf0;
+}
+  
+.container .selected-pd {
+    background-color: #f0fdff;
+    border: solid 2px #20caf0;
+}
+  
+  /* how to guide custom color */
+.bg-pale-cyan {
+    background-color: #c0e7e8;
+    border: solid 2px #c0e7e8;
+}
+  
+.bg-htg {
+    border: solid 2px #16a0a3;
+    color: #16a0a3;
+}
+  
+.bg-htg:hover {
+    background-color: #d9feff;
+    color: #16a0a3;
+}
+  
+.text-htg {
+    background-color: #c0e7e8;
+    color: #16a0a3;
+}
+  
+.container .selected-htg {
+    background-color: #d9feff;
+    border: solid 2px #16a0a3;
+}
+  
+  /* board of pharmacy custom color */
+.bg-banana-mania {
+    background-color: #fff0b3;
+    border: solid 2px #fff0b3;
+}
+  
+.bg-bp {
+    border: solid 2px #ffc107;
+    color: #ffc107;
+}
+  
+.bg-bp:hover {
+    background-color: #fff0b3;
+    color: #ffc107;
+}
+  
+.text-bp {
+    background-color: #fff4d3;
+    color: #ffc107;
+}
+  
+.container .selected-bp {
+    background-color: #fff0b3;
+    border: solid 2px #ffc107;
+}
+  
+  /* Pharmacy Forms */
+.bg-soft-pink {
+    background-color: #feb6cd;
+    border: solid 2px #feb6cd;
+}
+  
+.bg-pf {
+    border: solid 2px #feb6cd;
+    color: #feb6cd;
+}
+  
+.bg-pf:hover {
+    background-color: #ffe5ea;
+    color: #feb6cd;
+}
+  
+.text-pf {
+    background-color: #fff0f3;
+    color: #feb6cd;
+}
+  
+.container .selected-pf {
+    background-color: #ffe5ea;
+    border: solid 2px #feb6cd;
+}
+  
+  /* knowledge base icon */
+.knowledge-base-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    border-radius: 50px;
+}
+  
+.parent {
+    position: relative;
+}
+  
+.edit-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 6px;
+    border-radius: 5px;
+    color: white;
+}
+  
+.edit-icon:hover {
+    transition: all ease-in-out 200ms;
+    background-color: white;
+    color: #20caf0;
+}
+  
+.folder-btn-group-icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      border-radius: 5px;
+      color: white;
+}
+  
+.folder-delete-icon:hover {
+      transition: all ease-in-out 200ms;
+      background-color: white;
+      color: red;
+}
+.folder-edit-icon:hover {
+      transition: all ease-in-out 200ms;
+      background-color: white;
+      color: #20caf0;
+}
+
+
+#icon {
+    border: solid 2px white;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+  
+#icon:hover {
+    border: solid 2px #20caf0;
+    transition: all ease-in-out 300ms;
+}
+  
+.selected-icon {
+    background-color: green;
+}

@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS clan_table (
+    id TEXT PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    characters TEXT NOT NULL -- Store List<Int> as JSON string
+);
+
+selectAllClan:
+SELECT * FROM clan_table;
+
+selectClanById:
+SELECT * FROM clan_table WHERE id = ?;
+
+insertClan:
+INSERT OR REPLACE INTO clan_table(id, name, characters)
+VALUES (?, ?, ?);
+
+deleteAllClan:
+DELETE FROM clan_table;
