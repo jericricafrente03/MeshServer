@@ -17,6 +17,7 @@ import com.jeric.ricafrente.naruto.data.repository.PreferenceManager
 import com.jeric.ricafrente.naruto.data.repository.PreferencesManagerImpl
 import com.jeric.ricafrente.naruto.data.repository.RemoteDataSource
 import com.jeric.ricafrente.naruto.data.repository.RemoteDataSourceImpl
+import com.jeric.ricafrente.naruto.data.repository.RemoteDataSourceImplTest
 import com.jeric.ricafrente.naruto.ui.akatsuki.AkatsukiViewModel
 import com.jeric.ricafrente.naruto.ui.akatsuki.character.AkatsukiCharacterViewModel
 import com.jeric.ricafrente.naruto.ui.buruto.KaraViewModel
@@ -37,6 +38,7 @@ import org.koin.dsl.module
 val dataModule = module {
     single{ LocalDataSources(get(), get(), get(), get(), get()) }
     single<RemoteDataSource> { RemoteDataSourceImpl(get(), get()) }
+    single{ RemoteDataSourceImplTest(get()) }
     single{ GetAllCharacterUseCase(get()) }
     single{ GetAllTailBeastUseCase(get()) }
     single{ GetAllAkatsukiUseCase(get()) }

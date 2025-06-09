@@ -104,7 +104,7 @@ fun AkatsukiDetails(
                 },
                 navigationIcon = {
                     IconButton(
-                        onClick = { onBack() }, modifier = Modifier.testTag("kara_back"),
+                        onClick = { onBack() }, modifier = Modifier.testTag("akatsuki_back"),
                     ) {
                         Icon(Icons.Rounded.ArrowBackIosNew, contentDescription = null)
                     }
@@ -133,7 +133,7 @@ fun AkatsukiDetails(
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                     contentPadding = PaddingValues(20.dp),
-                    modifier = Modifier.testTag("kara_col")
+                    modifier = Modifier.testTag("akatsuki_col")
                 ) {
                     items(items = uiState, key = {it.id}){ data ->
                         KaraItem(
@@ -143,6 +143,7 @@ fun AkatsukiDetails(
                             images = data.images,
                             natureType = data.natureType,
                             tools = data.tools,
+                            modifier = Modifier.testTag(data.id)
                         )
                     }
                 }

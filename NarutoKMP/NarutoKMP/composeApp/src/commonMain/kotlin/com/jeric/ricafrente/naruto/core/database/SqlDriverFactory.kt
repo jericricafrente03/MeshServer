@@ -5,8 +5,7 @@ import org.koin.core.scope.Scope
 
 expect fun Scope.sqlDriverFactory(): SqlDriver
 fun createDatabase(driver: SqlDriver): NarutoKMP {
-    val database = NarutoKMP(
-        driver = driver,
+    return NarutoKMP(
+        driver
     )
-    return database
 }

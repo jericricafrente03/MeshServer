@@ -91,7 +91,7 @@ fun CharacterContent(
                 navigationIcon = {
                     IconButton(
                         onClick = { event(CharacterStateEvent.Event.GotoHomeEvent) },
-                        modifier = Modifier.testTag("clan_back"),
+                        modifier = Modifier.testTag("character_back"),
                     ) {
                         Icon(Icons.Rounded.ArrowBackIosNew, contentDescription = null)
                     }

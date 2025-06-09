@@ -163,6 +163,7 @@ fun GridDetails(
                             images = data.images,
                             natureType = data.natureType,
                             tools = data.tools,
+                            modifier = Modifier.testTag(data.id)
                         )
                     }
                 }

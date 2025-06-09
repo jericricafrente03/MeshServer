@@ -8,6 +8,8 @@ import com.jeric.ricafrente.naruto.core.database.dao.KaraDao
 import com.jeric.ricafrente.naruto.core.database.dao.NarutoCharacterDao
 import com.jeric.ricafrente.naruto.core.database.dao.TailedBeastDao
 import com.jeric.ricafrente.naruto.core.database.sqlDriverFactory
+import com.jeric.ricafrente.naruto.data.repository.LocalDataSourcesImpl
+import com.jeric.ricafrente.naruto.data.repository.LocalDataSourcesInterface
 import org.koin.dsl.module
 
 
@@ -19,4 +21,6 @@ val databaseModule = module {
     single { AkatsukiDao(akatsukiDatabase = get()) }
     single { ClanDao(clanDatabase = get()) }
     single { KaraDao(karaDatabase = get()) }
+    single<LocalDataSourcesInterface> { LocalDataSourcesImpl(get(), get(), get(),get(),get()) }
+
 }

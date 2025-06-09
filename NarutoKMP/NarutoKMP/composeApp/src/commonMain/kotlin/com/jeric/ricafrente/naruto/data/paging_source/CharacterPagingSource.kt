@@ -4,11 +4,12 @@ import app.cash.paging.PagingSource
 import app.cash.paging.PagingState
 import com.jeric.ricafrente.naruto.core.model.character.CharacterModel
 import com.jeric.ricafrente.naruto.core.network.client.NarutoClient
+import com.jeric.ricafrente.naruto.core.network.helper.NarutoApi
 import com.jeric.ricafrente.naruto.core.utils.toJoinedString
 
 class CharacterPagingSource(
     private val pageSize: Int,
-    private val client: NarutoClient
+    private val client: NarutoApi
 ) : PagingSource<Int, CharacterModel>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, CharacterModel> {

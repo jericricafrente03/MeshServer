@@ -37,7 +37,8 @@ fun ThumbnailItem(
     jutsu: List<String>,
     natureInfo: List<String>,
     trailsInfo: List<String>,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     val description = remember(name, jutsu, natureInfo, trailsInfo) {
         fun formatList(list: List<String>, fallback: String): String {
@@ -66,7 +67,7 @@ fun ThumbnailItem(
     }
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .width(220.dp)
             .clip(MaterialTheme.shapes.medium)
             .clickable { onClick() }
@@ -103,38 +104,6 @@ fun ThumbnailItem(
             style = MaterialTheme.typography.bodyMedium,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
-        )
-    }
-}
-
-
-@Composable
-fun AsyncImageWithState(
-    modifier: Modifier = Modifier,
-    url: String,
-    contentDescription: String?,
-    contentScale: ContentScale = ContentScale.Fit,
-) {
-    Box(modifier = modifier, contentAlignment = Alignment.Center) {
-
-        val context = LocalPlatformContext.current
-        val dataState by rememberUpdatedState(url)
-        val request by remember {
-            derivedStateOf {
-                ImageRequest.Builder(context)
-                    .data(dataState)
-                    .crossfade(true)
-                    .build()
-            }
-        }
-
-        SubcomposeAsyncImage(
-            contentScale = contentScale,
-            model = request,
-            loading = {
-                CircularProgressIndicator()
-            },
-            contentDescription = contentDescription,
         )
     }
 }

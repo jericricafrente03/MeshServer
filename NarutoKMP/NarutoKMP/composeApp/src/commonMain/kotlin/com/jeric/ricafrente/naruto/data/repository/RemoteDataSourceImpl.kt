@@ -8,7 +8,7 @@ import com.jeric.ricafrente.naruto.core.model.buruto.KaraModel
 import com.jeric.ricafrente.naruto.core.model.character.CharacterModel
 import com.jeric.ricafrente.naruto.core.model.clan.ClanModel
 import com.jeric.ricafrente.naruto.core.model.tailedbeast.TailedBeastModel
-import com.jeric.ricafrente.naruto.core.network.client.NarutoClient
+import com.jeric.ricafrente.naruto.core.network.helper.NarutoApi
 import com.jeric.ricafrente.naruto.core.utils.Constants
 import com.jeric.ricafrente.naruto.core.utils.networkBoundResource
 import com.jeric.ricafrente.naruto.data.mapper.akatsuki.fromEntityToModel
@@ -28,62 +28,61 @@ import com.jeric.ricafrente.naruto.data.paging_source.SearchCharacterPagingSourc
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 
 
 class RemoteDataSourceImpl(
-    private val local: LocalDataSources,
-    private val client: NarutoClient
+    private val local: LocalDataSourcesInterface,
+    private val client: NarutoApi
 ) : RemoteDataSource {
 
     override fun getAllHeroes(): Flow<PagingData<CharacterModel>> =
         Pager(PagingConfig(pageSize = Constants.SIZE)) {
-            local.characterDao.getAllCharacters(Constants.SIZE)
+            local.characterDao().getAllCharacters(Constants.SIZE)
         }.flow.flowOn(Dispatchers.IO)
 
     override fun getAllTailBeast() = networkBoundResource(
-        query = { local.tailBeastDao.getAllTailedBeastFlow().map { it.fromEntityToModel() } },
+        query = { local.tailBeastDao().getAllTailedBeastFlow().map { it.fromEntityToModel() } },
         fetch = { client.getAllTailBeasts() },
         saveFetchResult = { response ->
-            local.tailBeastDao.deleteAllTailedBeast()
+            local.tailBeastDao().deleteAllTailedBeast()
             response.tailedBeasts.toTailedBeastModels().forEach {
-                local.tailBeastDao.insert(it)
+                local.tailBeastDao().insert(it)
             }
         }
     )
 
     override fun getAllClan() = networkBoundResource(
-        query = { local.clanDao.getAllClan().map { it.fromEntityToModel() } },
+        query = { local.clanDao().getAllClan().map { it.fromEntityToModel() } },
         fetch = { client.getClan() },
         saveFetchResult = { response ->
-            local.clanDao.deleteClan()
+            local.clanDao().deleteClan()
             response.clans.toClanModels().forEach {
-                local.clanDao.insertClan(it)
+                local.clanDao().insertClan(it)
             }
         }
     )
 
     override fun getAkatsuki() = networkBoundResource(
-        query = { local.akatsukiDao.getAllAkatsuki().map { it.fromEntityToModel() } },
+        query = { local.akatsukiDao().getAllAkatsuki().map { it.fromEntityToModel() } },
         fetch = { client.getAkatsuki() },
         saveFetchResult = { response ->
-            local.akatsukiDao.deleteAkatsuki()
+            local.akatsukiDao().deleteAkatsuki()
             response.akatsuki.toAkatsukiModels().forEach {
-                local.akatsukiDao.insertAkatsuki(it)
+                local.akatsukiDao().insertAkatsuki(it)
             }
         }
     )
 
 
     override fun getAllKara() = networkBoundResource(
-        query = { local.karaDao.getAllKara().map { it.fromEntityToModel() } },
+        query = { local.karaDao().getAllKara().map { it.fromEntityToModel() } },
         fetch = { client.getBoruto() },
         saveFetchResult = { response ->
-            local.karaDao.deleteKara()
+            local.karaDao().deleteKara()
             response.kara.toKaraModels().forEach {
-                local.karaDao.insertKara(it)
+                local.karaDao().insertKara(it)
             }
         }
     )
@@ -103,19 +102,19 @@ class RemoteDataSourceImpl(
     }
 
     override suspend fun getSelectedKara(kara: Int): KaraModel {
-        return local.karaDao.selectOneById(kara.toString()).toDomainModel()
+        return local.karaDao().selectOneById(kara.toString()).toDomainModel()
     }
 
     override suspend fun getSelectedClan(clan: Int): ClanModel {
-        return local.clanDao.selectOneById(clan.toString()).toDomainModel()
+        return local.clanDao().selectOneById(clan.toString()).toDomainModel()
     }
 
     override suspend fun getSelectedTailedBeast(beast: Int): TailedBeastModel {
-        return local.tailBeastDao.selectOneById(beast.toString()).toDomainModel()
+        return local.tailBeastDao().selectOneById(beast.toString()).toDomainModel()
     }
 
     override suspend fun getSelectedAkatsuki(akatsukiModel: Int): AkatsukiModel {
-        return local.akatsukiDao.selectOneById(akatsukiModel.toString()).toDomainModel()
+        return local.akatsukiDao().selectOneById(akatsukiModel.toString()).toDomainModel()
     }
 
 }

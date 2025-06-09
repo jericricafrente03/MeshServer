@@ -3,11 +3,11 @@ package com.jeric.ricafrente.naruto.data.paging_source
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.jeric.ricafrente.naruto.core.model.character.CharacterModel
-import com.jeric.ricafrente.naruto.core.network.client.NarutoClient
+import com.jeric.ricafrente.naruto.core.network.helper.NarutoApi
 import com.jeric.ricafrente.naruto.data.mapper.character.fromDtoToModel
 
 class SearchCharacterPagingSource(
-    private val narutoClient: NarutoClient,
+    private val narutoClient: NarutoApi,
     private val query: String
 ) : PagingSource<Int, CharacterModel>() {
 

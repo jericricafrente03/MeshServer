@@ -4,6 +4,7 @@ import app.cash.paging.PagingSource
 import com.jeric.ricafrente.naruto.core.database.NarutoKMP
 import com.jeric.ricafrente.naruto.core.model.character.CharacterModel
 import com.jeric.ricafrente.naruto.core.network.client.NarutoClient
+import com.jeric.ricafrente.naruto.core.network.helper.NarutoApi
 import com.jeric.ricafrente.naruto.core.utils.toJoinedString
 import com.jeric.ricafrente.naruto.data.paging_source.CharacterPagingSource
 import kotlinx.coroutines.Dispatchers
@@ -12,7 +13,7 @@ import kotlinx.coroutines.withContext
 
 class NarutoCharacterDao(
     private val narutoDatabase: NarutoKMP,
-    private val client: NarutoClient
+    private val client: NarutoApi
 ) {
     private val query get() = narutoDatabase.narutoKMPQueries
 

@@ -23,7 +23,7 @@ fun ImagesVerticalGrid(
     onImageDragEnd: () -> Unit,
 ) {
     LazyVerticalStaggeredGrid(
-        modifier = modifier.testTag("home_col"),
+        modifier = modifier.testTag("character_col"),
         columns = StaggeredGridCells.Adaptive(120.dp),
         contentPadding = PaddingValues(10.dp),
         verticalItemSpacing = 10.dp,

@@ -33,6 +33,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -174,11 +175,13 @@ fun HomeDetails(
                 onClick = { event(HomeStateEvent.Event.GotoClanEvent) },
                 categoryState = CategoryState.clan,
                 modifier = Modifier.weight(1f)
+                    .testTag("button_goto_clan")
             )
             CategoryButton(
                 onClick = { event(HomeStateEvent.Event.GotoCharacterEvent) },
                 categoryState = CategoryState.character,
                 modifier = Modifier.weight(1f)
+                    .testTag("button_goto_character")
             )
         }
         Row(
@@ -189,11 +192,13 @@ fun HomeDetails(
                 onClick = { event(HomeStateEvent.Event.GotoKaraEvent) },
                 categoryState = CategoryState.villages,
                 modifier = Modifier.weight(1f)
+                    .testTag("button_goto_kara")
             )
             CategoryButton(
                 onClick = { event(HomeStateEvent.Event.GotoAkatsukiEvent) },
                 categoryState = CategoryState.akatsuki,
                 modifier = Modifier.weight(1f)
+                    .testTag("button_goto_akatsuki")
             )
         }
         Text(
